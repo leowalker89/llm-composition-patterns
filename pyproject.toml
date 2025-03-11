@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "llm-composition-patterns"
+version = "0.1.0"
+description = "A practical demonstration of LLM workflow patterns and agent architectures inspired by Anthropic's 'Building Effective Agents' article"
+readme = "README.md"
+requires-python = ">=3.12"
+license = {text = "MIT"}
+dependencies = [
+    "python-dotenv>=1.0.1",
+]
+
+[dependency-groups]
+dev = [
+    "black>=25.1.0",
+    "isort>=6.0.1",
+    "mypy>=1.15.0",
+    "pytest>=8.3.5",
+    "ruff>=0.9.10",
+]
