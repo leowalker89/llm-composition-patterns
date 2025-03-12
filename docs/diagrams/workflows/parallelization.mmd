@@ -1,0 +1,6 @@
+graph LR
+    A[Task] -->|Sectioning| B1[LLM Call 1]
+    A -->|Sectioning| B2[LLM Call 2]
+    B1 -->|Output| C[Aggregator]
+    B2 -->|Output| C
+    C -->|Final Output| D[Result]

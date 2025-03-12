@@ -4,13 +4,14 @@ A practical demonstration of LLM workflow patterns and agent architectures inspi
 
 ## Overview
 
-This project provides interactive examples and implementations of the various workflow patterns and agent architectures described in Anthropic's engineering blog post ["Building Effective Agents"](https://www.anthropic.com/engineering-at-anthropic/building-effective-agents) (December 2024). The showcase aims to help developers understand and implement these patterns in their own applications.
+This project offers interactive examples and implementations of LLM workflow patterns and agent architectures, drawing inspiration from Anthropic's blog post ["Building Effective Agents"](https://www.anthropic.com/engineering-at-anthropic/building-effective-agents) (December 2024) and resources like [Agent Recipes](https://www.agentrecipes.com/). It aims to help developers understand and implement these patterns in their applications.
 
 Rather than relying on complex frameworks, this project demonstrates simple, composable patterns that have proven effective in production environments across various industries.
 
 ## Included Patterns
 
 ### Building Block: The Augmented LLM
+
 
 The foundation of all agentic systems - an LLM enhanced with:
 - Retrieval capabilities

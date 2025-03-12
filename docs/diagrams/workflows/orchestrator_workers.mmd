@@ -1,0 +1,6 @@
+graph LR
+    A[Orchestrator LLM] -->|Task| B1[Worker LLM 1]
+    A -->|Task| B2[Worker LLM 2]
+    B1 -->|Output| C[Orchestrator LLM]
+    B2 -->|Output| C
+    C -->|Final Output| D[Result]

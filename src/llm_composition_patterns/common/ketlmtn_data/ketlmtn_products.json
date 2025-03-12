@@ -1,0 +1,1219 @@
+[
+    {
+      "product_id": 1,
+      "url": "https://ketlmtn.com/products/nofry-sunhoodie",
+      "extracted_data": {
+        "product_line_id": 1,
+        "category_id": 6,
+        "product_name": "Nofry Sun Hoodie",
+        "available_colors": [
+          "Cloud",
+          "Sage",
+          "Slate",
+          "Burgundy",
+          "Grey",
+          "White",
+          "Green",
+          "Black"
+        ],
+        "available_sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL",
+          "XXXL"
+        ],
+        "available_inseams": null,
+        "product_features": "UPF 30+ rating, Super breathable, lightweight\u00a0fabric, Four button snap closure, Thumb holes",
+        "fabric_details": "100% Polyester, Weight: 121g (taken from size medium), Fabric weight: 79gsm",
+        "other_details": "This\u00a0featherweight men's sun hoodie offers phenomenal UPF 30+ sun protection while allowing for unrestricted movement. We chose the perfect lightweight material to protect your skin but also prevent you from getting too hot. This summer shirt is perfect for desert adventures, fishing on the lake, or wrestling bears.",
+        "price": 64.95
+      },
+      "processed_at": "2025-03-11T16:42:32.433666"
+    },
+    {
+      "product_id": 2,
+      "url": "https://ketlmtn.com/products/tomfoolery-pant",
+      "extracted_data": {
+        "product_line_id": 11,
+        "category_id": 7,
+        "product_name": "Tomfoolery Chino Travel Pants (Slim Fit)",
+        "available_colors": [
+          "Grey",
+          "Khaki",
+          "Brown",
+          "Black",
+          "Blue Grey"
+        ],
+        "available_sizes": [
+          "S (29-31)",
+          "M (31-33)",
+          "L (33-35)",
+          "XL (35-37)",
+          "XXL (37-39)",
+          "XXXL (39-41)"
+        ],
+        "available_inseams": [
+          "30\"",
+          "32\"",
+          "34\""
+        ],
+        "product_features": "Super stretchy fabric is lightweight and breathable, Internal drawstring, Silicon gripper waistband, 2 front zipper pockets, 1 rear zipper pocket + 1 button rear pocket, Anti ball squish design, Modern fit that features more room in the hips and buttocks - not too tight and not too loose, Water resistant",
+        "fabric_details": "100% Polyester, Weight: 386g (taken from size M), Fabric weight: 222gsm",
+        "other_details": "The Tomfoolery pant features a classic modern fit that offers more room in the hips and buttocks. Not too tight, but not too loose :) To get the perfect size, take a similar pair of pants you have, lay them flat, measure and compare to our sizing chart shown below.",
+        "price": 94.95
+      },
+      "processed_at": "2025-03-11T16:42:34.625189"
+    },
+    {
+      "product_id": 3,
+      "url": "https://ketlmtn.com/products/ketl-mtn-vent-joggerish-lightweight-travel-pants",
+      "extracted_data": {
+        "product_line_id": 12,
+        "category_id": 7,
+        "product_name": "Vent Lightweight Active Pants (Slim Fit)",
+        "available_colors": [
+          "Brown",
+          "Pine",
+          "Black",
+          "Grey"
+        ],
+        "available_sizes": [
+          "S (29-31)",
+          "M (31-33)",
+          "L (33-35)",
+          "XL (35-37)",
+          "XXL (37-39)",
+          "XXXL (39-41)"
+        ],
+        "available_inseams": [
+          "30\"",
+          "32\"",
+          "34\""
+        ],
+        "product_features": "Super stretchy, lightweight, and breathable, Side phone stash zipper pocket, Rear zipper pocket, Mesh lined front pockets, Anti ball squish gusset design, Two key loops on the waistband, Drawstring closures",
+        "fabric_details": "100% Polyester, Weight: 278g (taken from size M), Fabric weight: 135gsm",
+        "other_details": "The Vent Lightweight Active pant features a tapered fit. To get the perfect size, take a similar pair of pants you have, lay them flat, measure and compare to our sizing chart shown below.",
+        "price": 89.95
+      },
+      "processed_at": "2025-03-11T16:42:36.612998"
+    },
+    {
+      "product_id": 4,
+      "url": "https://ketlmtn.com/products/tomfoolery-chino-travel-pant-straight-fit",
+      "extracted_data": {
+        "product_line_id": 11,
+        "category_id": 7,
+        "product_name": "Tomfoolery Chino Travel Pants (Straight Fit)",
+        "available_colors": [
+          "Grey",
+          "Brown",
+          "Khaki",
+          "Black",
+          "Blue Grey"
+        ],
+        "available_sizes": [
+          "S (29-31)",
+          "M (31-33)",
+          "L (33-35)",
+          "XL (35-37)",
+          "XXL (37-39)",
+          "XXXL (39-41)"
+        ],
+        "available_inseams": [
+          "30\"",
+          "32\"",
+          "34\""
+        ],
+        "product_features": "Super stretchy fabric is lightweight and breathable, Internal drawstring, Silicon gripper waistband, 2 front zipper pockets, 1 rear zipper pocket + button pocket, Anti ball squish design, Relaxed fit looser in the hips and calves, Water resistant",
+        "fabric_details": "100% Polyester, Weight: 403g (taken from size M), Fabric weight: 222gsm",
+        "other_details": "These lightweight & stretchy travel pants can be worn for just about any occasion - wear them for a 3 day adventure in the mountains or dress them up for a dinner night out. Just remember, tomfoolery is welcome, partake in it.",
+        "price": 94.95
+      },
+      "processed_at": "2025-03-11T16:42:38.931263"
+    },
+    {
+      "product_id": 5,
+      "url": "https://ketlmtn.com/products/shenanigan-pant",
+      "extracted_data": {
+        "product_line_id": 13,
+        "category_id": 7,
+        "product_name": "Shenanigan Outdoor Pants (Slim Fit)",
+        "available_colors": [
+          "Brown",
+          "Black",
+          "Grey"
+        ],
+        "available_sizes": [
+          "S (29-31)",
+          "M (31-33)",
+          "L (33-35)",
+          "XL (35-37)",
+          "XXL (37-39)",
+          "XXXL (39-41)"
+        ],
+        "available_inseams": [
+          "30\"",
+          "32\"",
+          "34\""
+        ],
+        "product_features": "Great for hiking & everyday activities, Super stretchy, lightweight, durable fabric, Gusset for extra comfort & stretch, Water & stain repellant, Grippy waistband, TSA friendly internal belt with G hook adjustable closure & snap button, Quick drying, Two mesh lined front pockets with small media pocket, Two rear zipper pockets, Size zipper pocket for media storage, Utility loop for sunglasses or keys",
+        "fabric_details": "96% Nylon, 4% Spandex, Weight: 332g (taken from size medium), Fabric weight: 156gsm",
+        "other_details": "The Shenanigan pants were created to be the most durable outdoor pant in our lineup. The magic of these pants is in the unique fabric. It's a magical blend of nylon twill that resembles denim without the annoying swoosh sound of regular outdoor pants. Soft to the touch, super stretchy, lightweight, quick drying and packed with useful features like a built in belt, utility loops, and multiple zipper pockets that will give you no excuse for why you lost your Airpods.",
+        "price": 99.95
+      },
+      "processed_at": "2025-03-11T16:42:41.348331"
+    },
+    {
+      "product_id": 6,
+      "url": "https://ketlmtn.com/products/wayward-short-sleeve",
+      "extracted_data": {
+        "product_line_id": 3,
+        "category_id": 4,
+        "product_name": "Wayward Short Sleeve Jersey",
+        "available_colors": [
+          "Blue",
+          "Green",
+          "Black",
+          "Grey"
+        ],
+        "available_sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "available_inseams": null,
+        "product_features": "Minimalist design great for the trails and post ride brewery session,UPF 30 rating,Lightweight and breathable material,Side zipper pocket can fit ID or credit cards,Microfiber eyewear wipe,Raglan sleeve with flatlock stitching throughout",
+        "fabric_details": "53% Polyester, 40% Recycled Polyester, 7% Spandex,Weight: 139g (taken from size medium),Fabric weight: 129gsm",
+        "other_details": "We created the Wayward SS to be the perfect top to ride in during the warmer months, but the truth is this shirt is right at home for any adventure that you might want to pursue. This lightweight active top provides maximum comfort and breathability while the minimalist design doesn't make you look like a power ranger. Grab the Wayward SS for your next adventure and thank us later.",
+        "price": 49.95
+      },
+      "processed_at": "2025-03-11T16:42:43.400219"
+    },
+    {
+      "product_id": 7,
+      "url": "https://ketlmtn.com/products/departed-featherweight-performance-tee-short-sleeve",
+      "extracted_data": {
+        "product_line_id": 2,
+        "category_id": 4,
+        "product_name": "Departed Featherweight Performance Tee Short Sleeve",
+        "available_colors": [
+          "Maroon",
+          "Navy",
+          "Grey",
+          "Black",
+          "Green"
+        ],
+        "available_sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL",
+          "XXXL"
+        ],
+        "available_inseams": null,
+        "product_features": "UPF30 rating, Super soft, Ultra stretchy, Featherweight & breathable, Raglan sleeve with flatlock stitching throughout, Minimalist design",
+        "fabric_details": "85% Polyester, 9% Tencel, 6% Spandex, Weight: 126g (taken from size medium), Fabric weight: 140gsm",
+        "other_details": "We created the Departed Featherweight Performance S/S Tee to be one of the softest and lightest tees in your wardrobe. Excellent for those hot summer days or as a layer for the cooler days. This super stretchy and ultra-soft fabric wicks moisture making it the perfect tee for hiking, trail runs, and mountain bike rides. This lightweight tee packs well and will be a worthy addition to your next adventure. Also available in both a henley and long sleeve.",
+        "price": 49.95
+      },
+      "processed_at": "2025-03-11T16:42:45.466747"
+    },
+    {
+      "product_id": 8,
+      "url": "https://ketlmtn.com/products/wayward-long-sleeve",
+      "extracted_data": {
+        "product_line_id": 3,
+        "category_id": 5,
+        "product_name": "Wayward Long Sleeve Jersey",
+        "available_colors": [
+          "Green",
+          "Grey",
+          "Blue",
+          "Black"
+        ],
+        "available_sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "available_inseams": null,
+        "product_features": "Minimalist design great for the trails and post ride brewery session, UPF 30 rating, Lightweight and breathable material, Side zipper pocket can fit ID or credit cards, Microfiber eyewear wipe, Raglan sleeve with flatlock stitching throughout",
+        "fabric_details": "53% Polyester, 40% Recycled Polyester, 7% Spandex, Weight: 172g (taken from size medium), Fabric weight: 129gsm",
+        "other_details": "Don\u2019t overthink your sizing! If you wear a medium normally, order a medium! All KETL apparel is made to fit somewhere between Brad Pitt and Chris Farley. But maybe slightly more towards Brad Pitt. And by the way, RIP Chris Farley #fansforlife",
+        "price": 54.95
+      },
+      "processed_at": "2025-03-11T16:42:47.567738"
+    },
+    {
+      "product_id": 9,
+      "url": "https://ketlmtn.com/products/skid-mark-mtb-short",
+      "extracted_data": {
+        "product_line_id": 17,
+        "category_id": 9,
+        "product_name": "Skid Mark MTB Shorts 12\"",
+        "available_colors": [
+          "Brown",
+          "Black",
+          "Grey"
+        ],
+        "available_sizes": [
+          "S (29-31)",
+          "M (31-33)",
+          "L (33-35)",
+          "XL (35-37)",
+          "XXL (37-39)",
+          "XXXL (39-41)"
+        ],
+        "available_inseams": [
+          "12"
+        ],
+        "product_features": "12\" inseam perfect for MTB, Super stretchy, lightweight, durable fabric, Water & stain repellant, Grippy waistband & G hook adjustable closure with a snap button, Quick drying, Slightly longer cut up front to accommodate knee guards, Two mesh lined front pockets, Two rear zipper pockets, Two side zipper pockets",
+        "fabric_details": "96% Nylon, 4% Spandex, Weight: 232g (taken from size medium), Fabric weight: 156gsm",
+        "other_details": "The mission with the Skid Mark mountain bike shorts was to nail all the useful features you\u2019d want on the bike, tailored with a mountain bike specific fit and a durable fabric that\u2019s stretchy, comfy and lacks swooshy\u2019ness. We went with a progressive fit that\u2019s not too loose, nor too tight, preventing your shorts from getting caught on your saddle. The length and cut is perfect to cover knee pads while the higher back rise on the waist prevents plumbers crack while seated. Packed with more useful features like two side zipper pockets and two rear zipper pockets, a stretchy waistband with built in belt to dial in the perfect fit, and our not patented at all \"arse steam release tech\" which is our fancy way of saying we laser cut some holes just below the waistband.",
+        "price": 94.95
+      },
+      "processed_at": "2025-03-11T16:42:50.320570"
+    },
+    {
+      "product_id": 10,
+      "url": "https://ketlmtn.com/products/vent-lightweight-active-pants-straight-fit",
+      "extracted_data": {
+        "product_line_id": 12,
+        "category_id": 7,
+        "product_name": "Vent Lightweight Active Pants (Straight Fit)",
+        "available_colors": [
+          "Black",
+          "Grey",
+          "Brown"
+        ],
+        "available_sizes": [
+          "S (29-31)",
+          "M (31-33)",
+          "L (33-35)",
+          "XL (35-37)",
+          "XXL (37-39)",
+          "XXXL (39-41)"
+        ],
+        "available_inseams": [
+          "30\"",
+          "32\"",
+          "34\""
+        ],
+        "product_features": "Super stretchy, lightweight, and breathable, Side phone stash zipper pocket, Rear zipper pocket, Mesh lined front pockets, Anti ball squish gusset design, Two key loops on the waistband, Drawstring closures",
+        "fabric_details": "100% Polyester, Weight: 282g (taken from size M), Fabric weight: 135gsm",
+        "other_details": "We designed the Vent Lightweight\u00a0Straight Fit Pants to be your perfect travel/hiking/adventure companion during the hottest of days. They feature a stretchy waistband,\u00a0straight fit and are crafted with a super lightweight & stretchy material that allows for ultimate freedom in movement with a crotch gusset to keep your family jewels from getting squished. These lightweight summer pants are incredibly breathable and wick moisture away at a moments notice. A side & rear zipper pocket keep your essentials secure so we encourage you to venture far & laugh hard while wearing these pants. Great for hiking, jogging, traveling, and chasing alpacas.",
+        "price": 89.95
+      },
+      "processed_at": "2025-03-11T16:42:52.710484"
+    },
+    {
+      "product_id": 11,
+      "url": "https://ketlmtn.com/products/ketl-mtn-escapade-lightweight-active-jacket",
+      "extracted_data": {
+        "product_line_id": 5,
+        "category_id": 6,
+        "product_name": "Escapade Lightweight Active Travel Jacket",
+        "available_colors": [
+          "Olive",
+          "Black",
+          "Charcoal"
+        ],
+        "available_sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL",
+          "XXXL"
+        ],
+        "available_inseams": null,
+        "product_features": "Highly breathable, lightweight, stretchy, DWR water resistant, Vented armpits, 2 side hand zipper pockets, 1 media chest zipper pocket, 2 internal pockets, Stretchy, fitted cuffs, Waist cord adjustment",
+        "fabric_details": "53% Nylon, 35% Polyester, 12% Spandex, Weight: 394g (taken from size M), Fabric weight: 144gsm",
+        "other_details": "We created the Escapade Lightweight Active Jacket to accompany you on a multitude of adventures. Breathable enough to be worn on mountain bike rides, hikes, runs, or even break dancing (we don't know what you are into). Constructed of super stretchy, lightweight, DWR water-resistant\u00a0material that gives you the freedom of movement and ultimate comfort you've been looking for. Our men's lightweight jacket features a modern fit that pairs nicely with a light undergarment. Did we mention it packs nicely too?",
+        "price": 94.95
+      },
+      "processed_at": "2025-03-11T16:42:54.874516"
+    },
+    {
+      "product_id": 12,
+      "url": "https://ketlmtn.com/products/virtue-hybrid-short-12-v-3",
+      "extracted_data": {
+        "product_line_id": 14,
+        "category_id": 8,
+        "product_name": "Virtue Hybrid Shorts 12\"",
+        "available_colors": [
+          "Brown",
+          "Charcoal",
+          "Green"
+        ],
+        "available_sizes": [
+          "S (30-32)",
+          "M (32-34)",
+          "L (34-36)",
+          "XL (36-38)",
+          "XXL (38-40)",
+          "XXXL (40-42)"
+        ],
+        "available_inseams": [
+          "12\""
+        ],
+        "product_features": "12\" inseam perfect for on the bike use, Functional minimalist design, Gusset keeps the family jewels nice and comfortable, Super stretchy lightweight fabric provides freedom of movement, Grippy waistband, TSA friendly internal belt with G hook adjustable closure & snap button, Quick drying so you can take a bath in the lake and not regret it, 2 mesh lined front zipper pockets, Rear zipper pocket",
+        "fabric_details": "53% Nylon, 35% Polyester, 12% Spandex, Weight: 241g (taken from size medium), Fabric weight: 144gsm",
+        "other_details": "We have updated the Virtue Hybrid 12\" V.3 short to be your perfect companion, both on and off the bike. Super stretchy, quick-dry material and new, more durable adjustable waistband gives you freedom of movement without having to worry about plumbers crack. We've also updated the sizing to feature a more true to size fit. These were designed to be worn for just about any activity, so we completely understand if you never want to take them off...",
+        "price": 79.95
+      },
+      "processed_at": "2025-03-11T16:42:57.233911"
+    },
+    {
+      "product_id": 13,
+      "url": "https://ketlmtn.com/products/alpine-dip-boardshorts",
+      "extracted_data": {
+        "product_line_id": 16,
+        "category_id": 9,
+        "product_name": "Alpine Dip-N-More Quick-Dry Boardshorts",
+        "available_colors": [
+          "Green",
+          "Black",
+          "Maroon"
+        ],
+        "available_sizes": [
+          "S (29-31)",
+          "M (31-33)",
+          "L (33-35)",
+          "XL (35-37)",
+          "XXL (37-39)",
+          "XXXL (39-41)"
+        ],
+        "available_inseams": null,
+        "product_features": "Inseam: 7\", Super stretchy, lightweight, and breathable, Quick dry finish, Rear zipper pocket, Mesh lined front pockets, Key loop on the waistband, Drawstring closure with button",
+        "fabric_details": "86% Polyester, 14% Spandex, Weight: 174g (taken from size M), Fabric weight: 128gsm",
+        "other_details": "The Alpine Dip-N-More boardshorts are meticulously engineered to provide the maximum amount of versatility, functionality, style, and fun. They feature a 7\" inseam and are crafted with a high-performance blend of stretchy and lightweight material designed to dry in a jiffy so you don't stay drenched after a refreshing alpine dip. These shorts aren't just limited to water shenanigans; they are versatile enough to accompany you on a hike, a city run, crushing those gym sessions, or even lounging around the house. Once you throw these on, we have a feeling you'll be living in them all summer.",
+        "price": 64.95
+      },
+      "processed_at": "2025-03-11T16:42:59.622394"
+    },
+    {
+      "product_id": 14,
+      "url": "https://ketlmtn.com/products/vent-lightweight-active-shorts-9",
+      "extracted_data": {
+        "product_line_id": 12,
+        "category_id": 8,
+        "product_name": "Vent Lightweight Active Shorts 9\"",
+        "available_colors": [
+          "Brown",
+          "Grey",
+          "Black",
+          "Pine"
+        ],
+        "available_sizes": [
+          "S (29-31)",
+          "M (31-33)",
+          "L (33-35)",
+          "XL (35-37)",
+          "XXL (37-39)",
+          "XXXL (39-41)"
+        ],
+        "available_inseams": [
+          "9\""
+        ],
+        "product_features": "Super stretchy, lightweight, and breathable, Side phone stash zipper pocket, Rear zipper pocket, Mesh lined front pockets, Anti ball squish gusset design, Two key loops on the waistband, Drawstring closures",
+        "fabric_details": "100% Polyester, Weight: 195g (taken from size M), Fabric weight: 135gsm",
+        "other_details": "We designed the Vent Lightweight 9\" Shorts to be your perfect travel/hiking/adventure short. Available in both 7\" & 9\" inseams, they feature a stretchy waistband, modern fit and are crafted with a super lightweight & stretchy material that allows for ultimate freedom in movement with a crotch gusset to keep your family jewels from getting squished. These lightweight summer shorts are incredibly breathable and wick moisture away at a moments notice. A side & rear zipper pocket keep your essentials secure so we encourage you to venture far & laugh hard while wearing these shorts. Great for hiking, running, traveling, and playing backgammon in the woods.",
+        "price": 74.95
+      },
+      "processed_at": "2025-03-11T16:43:01.970547"
+    },
+    {
+      "product_id": 15,
+      "url": "https://ketlmtn.com/products/virtue-hybrid-short-9-v-3",
+      "extracted_data": {
+        "product_line_id": 14,
+        "category_id": 9,
+        "product_name": "Virtue Hybrid Shorts 9\"",
+        "available_colors": [
+          "Brown",
+          "Charcoal",
+          "Green"
+        ],
+        "available_sizes": [
+          "S (30-32)",
+          "M (32-34)",
+          "L (34-36)",
+          "XL (36-38)",
+          "XXL (38-40)",
+          "XXXL (40-42)"
+        ],
+        "available_inseams": [
+          "9\""
+        ],
+        "product_features": "9\" inseam great for hiking & everyday activities, Functional minimalist design, Gusset keeps the family jewels nice and comfortable, Super stretchy lightweight fabric provides freedom of movement, Grippy waistband, TSA friendly internal belt with G hook adjustable closure, Quick drying so you can take a bath in the lake and not regret it, 2 mesh lined front pockets, Rear zipper pocket",
+        "fabric_details": "53% Nylon, 35% Polyester, 12% Spandex, Weight: 234g (taken from size medium), Fabric weight: 144gsm",
+        "other_details": "*Changes from V.2 to V.3 short include left zipper pocket (so now both front pockets have zippers), larger loop for G hook closure, and updated sizing which is more roomy and true to size.* We have updated the Virtue Hybrid 9\" V.3 short to be your perfect companion, for whatever adventure you pursue. Super stretchy, quick-dry material and new, more durable adjustable waistband gives you freedom of movement without having to worry about plumbers crack. We've also updated the sizing to feature a more true to size fit. These were designed to be worn for just about any activity, so we completely understand if you never want to take them off...",
+        "price": 79.95
+      },
+      "processed_at": "2025-03-11T16:43:04.703591"
+    },
+    {
+      "product_id": 16,
+      "url": "https://ketlmtn.com/products/shenanigan-outdoor-pant-straight-fit",
+      "extracted_data": {
+        "product_line_id": 13,
+        "category_id": 7,
+        "product_name": "Shenanigan Outdoor Pants (Straight Fit)",
+        "available_colors": [
+          "Brown",
+          "Grey",
+          "Black"
+        ],
+        "available_sizes": [
+          "S (29-31)",
+          "M (31-33)",
+          "L (33-35)",
+          "XL (35-37)",
+          "XXL (37-39)"
+        ],
+        "available_inseams": [
+          "30\"",
+          "32\"",
+          "34\""
+        ],
+        "product_features": "Great for hiking & everyday activities, Super stretchy, lightweight, durable fabric, Gusset for extra comfort & stretch, Water & stain repellant, Grippy waistband, Quick drying, TSA friendly internal belt with G hook adjustable closure & snap button, Two mesh lined front pockets with small media pocket, Two rear zipper pockets, Size zipper pocket for media storage, Utility loop (2) for sunglasses or keys",
+        "fabric_details": "96% Nylon, 4% Spandex, Weight: 339g (taken from size medium), Fabric weight: 156gsm",
+        "other_details": "The Shenanigan straight fit hiking pants were created to be the most durable outdoor pant in our lineup. The magic of these pants is in the unique fabric. It's a magical blend of nylon twill that resembles denim without the annoying swoosh sound of regular outdoor pants. Soft to the touch, super stretchy, lightweight, quick drying and packed with useful features like a built in belt, utility loops, and multiple zipper pockets that will give you no excuse for why you lost your Airpods.",
+        "price": 99.95
+      },
+      "processed_at": "2025-03-11T16:43:07.133447"
+    },
+    {
+      "product_id": 17,
+      "url": "https://ketlmtn.com/products/canyon-bib",
+      "extracted_data": {
+        "product_line_id": 15,
+        "category_id": 9,
+        "product_name": "Canyon Bib",
+        "available_colors": [
+          "Rust",
+          "Clay Topo",
+          "Grey Topo"
+        ],
+        "available_sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "available_inseams": null,
+        "product_features": "10mm thick Italian made quadruple layer chamois,3 easy to reach rear pockets,Central channel to relieve taint pain,Leg grippers,Mesh back,Superior moisture management",
+        "fabric_details": "77% Polyamide,23% Elastane",
+        "other_details": "At the core of any efficient mountain biking kit is a basic liner bib - our MTB bib is anything but basic. Featuring an Italian made quadruple layer chamois and crafted using lightweight, breathable materials, our cycling bib is designed to be worn under an overshort and provide just the right amount of compression without being constricting. The mesh back design keeps air moving and moisture at bay. 3 easy to reach rear pockets provide ample space for your ride necessities like a water bottle, snacks, kazoos and tools while laying nicely over the waistband of your MTB shorts.",
+        "price": 129.95
+      },
+      "processed_at": "2025-03-11T16:43:09.000634"
+    },
+    {
+      "product_id": 18,
+      "url": "https://ketlmtn.com/products/folly-microfleece-active-hoodie-v-2-zip-up",
+      "extracted_data": {
+        "product_line_id": 4,
+        "category_id": 6,
+        "product_name": "Folly Active Travel Hoodie V.2 (Zip-Up)",
+        "available_colors": [
+          "Green",
+          "Black",
+          "Grey"
+        ],
+        "available_sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL",
+          "XXXL"
+        ],
+        "available_inseams": null,
+        "product_features": "Moisture-wicking, body temperature regulating performance fabric, Super soft & stretchy, Front kangaroo pocket with 2 zippers, Armpit vent holes, Thumbholes at cuff",
+        "fabric_details": "48% Rayon, 45% Polyester, 7% Spandex, Weight: 577g (taken from size M), Fabric weight: 350gsm",
+        "other_details": "The original Folly Zip Up hoodie was a great hoodie, but we knew we could make improvements. For V.2, we've updated the fabric to be more durable and snag resistant while also increasing the sleeve length. See, we do read reviews and listen to your input! This active hoodie still regulates your body temperature while effectively managing heat, due in part to the fabric selection which offers the perfect combination of softness, comfort and performance. Whether donned as a mid-layer for extra insulation or flaunted as an individual layer, this technical hoodie unmistakably outshines the rest.",
+        "price": 79.95
+      },
+      "processed_at": "2025-03-11T16:43:11.097517"
+    },
+    {
+      "product_id": 19,
+      "url": "https://ketlmtn.com/products/vent-lightweight-active-shorts-7",
+      "extracted_data": {
+        "product_line_id": 12,
+        "category_id": 9,
+        "product_name": "Vent Lightweight Active Shorts 7\"",
+        "available_colors": [
+          "Pine",
+          "Brown",
+          "Grey",
+          "Black"
+        ],
+        "available_sizes": [
+          "S (29-31)",
+          "M (31-33)",
+          "L (33-35)",
+          "XL (35-37)",
+          "XXL (37-39)",
+          "XXXL (39-41)"
+        ],
+        "available_inseams": [
+          "7\""
+        ],
+        "product_features": "Super stretchy, lightweight, and breathable, Side phone stash zipper pocket, Rear zipper pocket, Mesh lined front pockets, Anti ball squish gusset design, Two key loops on the waistband, Drawstring closures",
+        "fabric_details": "100% Polyester, Weight: 187g (taken from size M), Fabric weight: 135gsm",
+        "other_details": "We designed the Vent Lightweight 7\" Shorts to be your perfect travel/hiking/adventure short. Available in both 7\" & 9\" inseams, they feature a stretchy waistband, modern fit and are crafted with a super lightweight & stretchy material that allows for ultimate freedom in movement with a crotch gusset to keep your family jewels from getting squished. These lightweight summer shorts are incredibly breathable and wick moisture away at a moments notice. A side & rear zipper pocket keep your essentials secure so we encourage you to venture far & laugh hard while wearing these shorts. Great for hiking, jogging, traveling, and playing backgammon in the woods.",
+        "price": 74.95
+      },
+      "processed_at": "2025-03-11T16:43:13.411059"
+    },
+    {
+      "product_id": 20,
+      "url": "https://ketlmtn.com/products/departed-featherweight-performance-tee-long-sleeve",
+      "extracted_data": {
+        "product_line_id": 2,
+        "category_id": 5,
+        "product_name": "Departed Featherweight Performance Tee Long Sleeve",
+        "available_colors": [
+          "Navy",
+          "Black",
+          "Green",
+          "Maroon",
+          "Grey"
+        ],
+        "available_sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "available_inseams": null,
+        "product_features": "UPF30 rating, Super soft, Ultra stretchy, Featherweight & breathable, Raglan sleeve with flatlock stitching throughout",
+        "fabric_details": "85% Polyester, 9% Tencel, 6% Spandex, Weight: 148g (taken from size medium), Fabric weight: 140gsm",
+        "other_details": "We created the Departed Featherweight Performance L/S Tee to be one of the softest and lightest tees in your wardrobe. Excellent for those hot summer days or as a layer for the cooler days. This super stretchy and ultra-soft fabric wicks moisture making it the perfect tee for hiking, trail runs, and mountain bike rides. This lightweight tee packs well and will be a worthy addition to your next adventure. Also available in both a henley and short sleeve.",
+        "price": 54.95
+      },
+      "processed_at": "2025-03-11T16:43:15.431874"
+    },
+    {
+      "product_id": 21,
+      "url": "https://ketlmtn.com/products/shenanigan-short",
+      "extracted_data": {
+        "product_line_id": 13,
+        "category_id": 8,
+        "product_name": "Shenanigan Outdoor Shorts 9\"",
+        "available_colors": [
+          "Grey",
+          "Brown",
+          "Black"
+        ],
+        "available_sizes": [
+          "S (29-31)",
+          "M (31-33)",
+          "L (33-35)",
+          "XL (35-37)",
+          "XXL (37-39)",
+          "XXXL (39-41)"
+        ],
+        "available_inseams": [
+          "9"
+        ],
+        "product_features": "9\" inseam great for hiking & everyday activities, Super stretchy, lightweight, durable fabric, Gusset for extra comfort & stretch, Water & stain repellant, Grippy waistband, TSA friendly internal belt with G hook adjustable closure & snap button, Quick drying, Two mesh lined front pockets with small media pocket, Two rear zipper pockets, Side zipper pocket for media storage, Utility loop for sunglasses or keys",
+        "fabric_details": "96% Nylon, 4% Spandex, Weight: 232g (taken from size medium), Fabric weight: 156gsm",
+        "other_details": "The Shenanigan Shorts were created to be the most durable shorts in our lineup. The magic of these shorts is in the unique fabric. It's an exceptional blend of nylon twill that resembles denim without the annoying swoosh sound of regular outdoor shorts. Soft to the touch, super stretchy, lightweight, quick drying and packed with useful features like a built in belt, utility loops, and multiple zipper pockets that will give you no excuse for why you lost your Airpods.",
+        "price": 79.95
+      },
+      "processed_at": "2025-03-11T16:43:17.848072"
+    },
+    {
+      "product_id": 22,
+      "url": "https://ketlmtn.com/products/nofry-long-sleeve-sun-shirt",
+      "extracted_data": {
+        "product_line_id": 1,
+        "category_id": 5,
+        "product_name": "Nofry Sun Shirt Long Sleeve",
+        "available_colors": [
+          "Burgundy",
+          "Black",
+          "Sage",
+          "Grey",
+          "Cloud",
+          "Green",
+          "Slate"
+        ],
+        "available_sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL",
+          "XXXL"
+        ],
+        "available_inseams": null,
+        "product_features": "UPF 30+ rating,Thumb holes,Premium featherweight fabric,Ventilation for breathability,Locker loop",
+        "fabric_details": "100% Polyester,Weight: 105g (taken from size medium),Fabric weight: 79gsm",
+        "other_details": "The Nofry Long Sleeve Sun Shirt is designed after our top selling Nofry Sun Hoodie for ultimate sun protection and unrestricted comfort. Crafted with the same attention to detail as our sun hoodie, this shirt boasts an impressive UPF 30+ sun protection rating. We've carefully selected a lightweight material that shields your skin from harmful UV rays while ensuring you stay cool and comfortable, even in scorching conditions. Whether you're embarking on desert adventures, casting a line on the lake, or simply enjoying the great outdoors, our short sleeve sun shirt is your go-to companion.",
+        "price": 54.95
+      },
+      "processed_at": "2025-03-11T16:43:19.872075"
+    },
+    {
+      "product_id": 23,
+      "url": "https://ketlmtn.com/products/ketl-mtn-departed-featherweight-performance-henley-pocket-tee",
+      "extracted_data": {
+        "product_line_id": 2,
+        "category_id": 5,
+        "product_name": "Departed Featherweight Performance Henley Pocket Tee",
+        "available_colors": [
+          "Black",
+          "Navy",
+          "Maroon",
+          "Green",
+          "Grey"
+        ],
+        "available_sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "available_inseams": null,
+        "product_features": "UPF30\u00a0rating, Super soft, Ultra stretchy, Featherweight & breathable, Raglan sleeve with flatlock stitching throughout, Minimalist design",
+        "fabric_details": "85% Polyester, 9% Tencel, 6% Spandex, Weight: 153g (taken from size medium), Fabric weight: 140gsm",
+        "other_details": "We created the Departed Featherweight Performance Henley Pocket Tee to be one of the softest and lightest tees in your wardrobe. Excellent for those hot summer days or as a layer for the cooler days. This super stretchy and ultra-soft fabric wicks moisture making it the perfect tee for hiking, trail runs, and mountain bike rides. This lightweight tee packs well and will be a worthy addition to your next adventure.",
+        "price": 54.95
+      },
+      "processed_at": "2025-03-11T16:43:21.894632"
+    },
+    {
+      "product_id": 24,
+      "url": "https://ketlmtn.com/products/bodbrella-rain-jacket",
+      "extracted_data": {
+        "product_line_id": 6,
+        "category_id": 6,
+        "product_name": "BodBrella Rain Jacket",
+        "available_colors": [
+          "Black",
+          "Blue"
+        ],
+        "available_sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL",
+          "XXXL"
+        ],
+        "available_inseams": null,
+        "product_features": "DWR 10K waterproofing, 10K breathability, 2 hand zipper pockets, Vented armpits, Chest media pocket doubles as a stuff sack, 2 adjustment points for hood, Soft fabric chin landing when jacket is fully zipped, Waist cinch cord",
+        "fabric_details": "100% Nylon, Weight: 278g (taken from size M), Fabric weight: 67gsm",
+        "other_details": "Ever wanted a rain jacket that doesn\u2019t make you look like a walking trash bag? Meet the Bodbrella! Crafted from 2.5 layer nylon, it balances breathability, packability, and freedom of movement. With a DWR 10K waterproof rating, it laughs in the face of rain for 1-2 hours while staying breathable at 10K. Perfect for mountain adventurers or savvy travelers, it\u2019s loaded with features: two hand zippers, a chest pocket that doubles as a stuff sack, adjustable hood, and a waist cinch cord for the perfect fit.",
+        "price": 144.95
+      },
+      "processed_at": "2025-03-11T16:43:24.013493"
+    },
+    {
+      "product_id": 25,
+      "url": "https://ketlmtn.com/products/nofry-short-sleeve-sun-shirt",
+      "extracted_data": {
+        "product_line_id": 1,
+        "category_id": 4,
+        "product_name": "Nofry Sun Shirt Short Sleeve",
+        "available_colors": [
+          "Burgundy",
+          "Grey",
+          "Green",
+          "Black",
+          "Slate"
+        ],
+        "available_sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL",
+          "XXXL"
+        ],
+        "available_inseams": null,
+        "product_features": "UPF 30+ rating, Premium featherweight fabric, Ventilation for breathability, Locker loop, Moisture wicking, Quick dry",
+        "fabric_details": "100% Polyester, Weight: 81g (taken from size medium), Fabric weight: 79gsm",
+        "other_details": "The Nofry Short Sleeve Sun Shirt is designed after our top selling Nofry Sun Hoodie for ultimate sun protection and unrestricted comfort. Crafted with the same attention to detail as our sun hoodie, this shirt boasts an impressive UPF 30+ sun protection rating. We've carefully selected a lightweight material that shields your skin from harmful UV rays while ensuring you stay cool and comfortable, even in scorching conditions. Whether you're embarking on a trail run, strength training, or simply enjoying the great outdoors, our short sleeve sun shirt is your go-to companion.",
+        "price": 49.95
+      },
+      "processed_at": "2025-03-11T16:43:26.209695"
+    },
+    {
+      "product_id": 26,
+      "url": "https://ketlmtn.com/products/lightweight-mtb-glove",
+      "extracted_data": {
+        "product_line_id": 12,
+        "category_id": 14,
+        "product_name": "Vent Touch MTB Glove",
+        "available_colors": [
+          "Black",
+          "Teal"
+        ],
+        "available_sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "available_inseams": null,
+        "product_features": "Lightweight, breathable mesh back, Silicone grip thumb and index finger, Touchscreen compatible, Perforated palm, Elastic pull on style",
+        "fabric_details": "Back: 82% Nylon, 18% Spandex, Back of thumb: 92% Polyester, 8% Elastane, Palm: 80% Polyester, 20% Polyurethane, Cuff: 85% Nylon, 15% Spandex",
+        "other_details": "We figured we could improve on our previous MTB glove, so we did just that. Designed with a much more lightweight, breathable fabric that is touchscreen compatible so you don't have to take your gloves off to text your spouse that you're still ripping the trails with your buddies. We also added some non-slip silicone to the thumb and index finger for superb grip and control and finished them off with perforated palms to help keep your hands cool and dry.",
+        "price": 34.95
+      },
+      "processed_at": "2025-03-11T16:43:28.258588"
+    },
+    {
+      "product_id": 27,
+      "url": "https://ketlmtn.com/products/sierra-loft-insulated-jacket",
+      "extracted_data": {
+        "product_line_id": 7,
+        "category_id": 6,
+        "product_name": "SierraLoft Insulated Down Jacket",
+        "available_colors": [
+          "Blue",
+          "Black"
+        ],
+        "available_sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "available_inseams": null,
+        "product_features": "Mid-weight wind proof synthetic insulated,2 hand zipper pockets,1 chest zipper pocket,Packable into front left zipper pocket,60 gsm insulation in body, 40 gsm insulation in arms,Soft touch fabric inside hood and pockets,Adjustable waist cord,DWR finish (no PFA's)",
+        "fabric_details": "Shell: 30% Recycled Nylon, 59% Nylon, 11% Spandex,Shell fabric weight: 70gsm,Lining: 94% Nylon, 6% Graphene Nylon,Lining fabric weight: 38gsm,Weight: 425g (taken from size M),Insulation: 60gsm for body, 40gsm for sleeves. Made from 100% recycled materials, including post-consumer water bottles and pre-consumer waste",
+        "other_details": "The Sierra Loft insulated puffy jacket was designed to be your \u201cmost go to\u201d jacket every winter. The perfect midweight insulation for incredible warmth to packability ratio. Ideal for high alpine missions or to be the one jacket you pack for all of your travels. Featuring 2 hand zipper pockets and 1 chest zipper pocket big enough for your phone, wallet, or whatever else. The jacket can also be compressed and completely packed into its front left pocket. Shockingly small and light while packed up in relation to how warm this jacket is. All of this topped off with DWR to repel water. Ideal for roughly 30-55 degree temps Fahrenheit, depending on the man you are.",
+        "price": 189.95
+      },
+      "processed_at": "2025-03-11T16:43:30.923508"
+    },
+    {
+      "product_id": 28,
+      "url": "https://ketlmtn.com/products/warmweather-merino-wool-socks",
+      "extracted_data": {
+        "product_line_id": null,
+        "category_id": 3,
+        "product_name": "Warmweather Merino Wool Quick-Dry Socks",
+        "available_colors": [
+          "Grey/Black",
+          "Black"
+        ],
+        "available_sizes": [
+          "Men's 8.5-12.5"
+        ],
+        "available_inseams": null,
+        "product_features": "Seamless toe cap, Thin mesh design on the\u00a0front of the sock for moisture and temperature control, Compression\u00a0on the foot and top of the shaft, Lightweight sock that works in a ton of different scenarios, US Men's: 8.5-12.5 / EU Men's: 41.5-47",
+        "fabric_details": "39% Merino Wool, 28% Lycra, 22% Spandex, 11% Nylon",
+        "other_details": "The perfect sock for warm weather. Thin, moisture-wicking & breathable as ever. These socks are designed for even the hottest days. Thoughtfully placed mesh & compression paired with an astonishingly good Merino wool blend fabric will have your feet as happy as pancakes.",
+        "price": 24.95
+      },
+      "processed_at": "2025-03-11T16:43:32.848307"
+    },
+    {
+      "product_id": 29,
+      "url": "https://ketlmtn.com/products/folly-microfleece-active-hoodie-v-2-pullover",
+      "extracted_data": {
+        "product_line_id": 4,
+        "category_id": 6,
+        "product_name": "Folly Active Travel Hoodie V.2 (Pullover)",
+        "available_colors": [
+          "Grey",
+          "Black",
+          "Green"
+        ],
+        "available_sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "available_inseams": null,
+        "product_features": "Moisture-wicking, body temperature regulating performance fabric, Super soft & stretchy, Front kangaroo pocket with 2 zippers, Armpit vent holes, Thumbholes at cuff",
+        "fabric_details": "48% Rayon, 45% Polyester, 7% Spandex, Weight: 612g (taken from size M), Fabric weight: 350gsm",
+        "other_details": "The original Folly Pullover hoodie was a great hoodie, but we knew we could make improvements. For V.2, we've updated the fabric to be more durable and snag resistant while also increasing the sleeve length. See, we do read reviews and listen to your input! This active hoodie still regulates your body temperature while effectively managing heat, due in part to the fabric selection which offers the perfect combination of softness, comfort and performance. Whether donned as a mid-layer for extra insulation or flaunted as an individual layer, this technical hoodie unmistakably outshines the rest.",
+        "price": 74.95
+      },
+      "processed_at": "2025-03-11T16:43:34.942028"
+    },
+    {
+      "product_id": 30,
+      "url": "https://ketlmtn.com/products/coolweather-merino-wool-sock",
+      "extracted_data": {
+        "product_line_id": null,
+        "category_id": 3,
+        "product_name": "Coolweather Merino Wool Cushioned Socks",
+        "available_colors": [
+          "Black"
+        ],
+        "available_sizes": [
+          "Men's 8.5-12.5"
+        ],
+        "available_inseams": null,
+        "product_features": "Seamless toe for abrasion free wear, Thin mesh design on the top of the foot for moisture and temperature control, Paladin Protection Pad placed at the top of the sock to protect the bony provinces of your foot and allow blood flow to the dorsalis pedis artery, Compression at the top of the shaft, Cushioning in the toe, along the bottom of the foot, and heel to prevent blistering",
+        "fabric_details": "41% Merino Wool, 23% Lycra, 20% Spandex, 16% Nylon",
+        "other_details": "The perfect Merino Wool blend for cooler weather that dries fast, resists odor & is as comfy as it gets. Thoughtfully placed cushioning, mesh & compression to keep your little piggies warm & happy in any scenario.",
+        "price": 24.95
+      },
+      "processed_at": "2025-03-11T16:43:36.762501"
+    },
+    {
+      "product_id": 31,
+      "url": "https://ketlmtn.com/products/subliminal-messaging-tri-blend-tee",
+      "extracted_data": {
+        "product_line_id": 10,
+        "category_id": 4,
+        "product_name": "Subliminal Messaging Tri-Blend Tech Tee",
+        "available_colors": [
+          "Charcoal Grey"
+        ],
+        "available_sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "available_inseams": null,
+        "product_features": "Super soft, Stretchy",
+        "fabric_details": "50% Polyester, 38% Cotton & 12% Rayon, Weight: 130g (taken from size medium)",
+        "other_details": "This is an\u00a0astonishingly soft and lightweight tech tee full of secret messages.\u00a0It's a\u00a0casual tee as comfortable as they come yet it provides the wearer with magical powers*\u00a0plus\u00a0reminders of an ideal way to live life:\u00a0Using\u00a0fun as a prescription for happiness. We know,\u00a0most of the above makes little sense. But, you'll understand if you ever land the pleasure of sliding this\u00a0heavenly\u00a0soft tee over your upper half. No nipple chafing with this baby or your money back! We designed this tee to have an athletic fit featuring a long torso length, which also happens\u00a0to prevent plumbers crack.\u00a0:)",
+        "price": 29.95
+      },
+      "processed_at": "2025-03-11T16:43:38.852543"
+    },
+    {
+      "product_id": 32,
+      "url": "https://ketlmtn.com/products/terra-travel-towel",
+      "extracted_data": {
+        "product_line_id": null,
+        "category_id": 3,
+        "product_name": "Terra Travel Towel",
+        "available_colors": [
+          "Grey"
+        ],
+        "available_sizes": [
+          "S (29.5\" x 16.5\")",
+          "L (50\" x 24.5\")"
+        ],
+        "available_inseams": null,
+        "product_features": "Quick dry fabric, Absorbent, Made for travel, Small: 29.5\" x 16.5\", Large: 50\" x 24.5\"",
+        "fabric_details": "85% Polyester, 15% Nylon, Weight: Small - 74g, Large - 178g, Fabric weight: 195gsm",
+        "other_details": "At just a fraction of the weight of traditional towels, the Terra Travel Towel is designed to be your trusty sidekick on any adventure. Our advanced fabric quickly absorbs moisture, whether it's from a refreshing swim or a sudden rain shower, and dries in no time, ensuring you stay comfortable and ready for your next escapade. Compact and packable, it won't hog space in your backpack or luggage, leaving more room for the essentials. Whether you're hiking rugged trails, backpacking across the PCT, or simply seeking solace by the water's edge, this towel is the perfect addition to your setup.",
+        "price": 19.95
+      },
+      "processed_at": "2025-03-11T16:43:40.853968"
+    },
+    {
+      "product_id": 33,
+      "url": "https://ketlmtn.com/products/fairweather-merino-wool-socks-one-size-mens-7-12-5",
+      "extracted_data": {
+        "product_line_id": 1,
+        "category_id": 12,
+        "product_name": "Fairweather Merino Wool All-Season Socks",
+        "available_colors": [
+          "Grey/Black"
+        ],
+        "available_sizes": [
+          "Men's 8.5-12.5"
+        ],
+        "available_inseams": null,
+        "product_features": "Odor resistant, Temperature regulating, Seamless toe cap, Compression at the top of the shaft, Cushioning in the toe, along the bottom of the foot, and heel to prevent blistering, US Men's: 8.5-12.5 / EU Men's: 41.5-47",
+        "fabric_details": "41% Merino Wool, 23% Lycra, 20% Spandex, 16% Nylon",
+        "other_details": "This Merino Wool blend sock dries fast, resists odor & is as comfy as it gets. Thoughtfully placed cushioning on pressure points, thin and breathable fabric will make these your go-to socks for any ride, run, hike or dance.",
+        "price": 24.95
+      },
+      "processed_at": "2025-03-11T16:43:42.533723"
+    },
+    {
+      "product_id": 34,
+      "url": "https://ketlmtn.com/products/venture-air-5-panel-mesh-hat",
+      "extracted_data": {
+        "product_line_id": 9,
+        "category_id": 10,
+        "product_name": "Venture Air 5 Panel Lightweight Hat",
+        "available_colors": [
+          "Navy",
+          "Black",
+          "Light Grey"
+        ],
+        "available_sizes": [
+          "One Size"
+        ],
+        "available_inseams": null,
+        "product_features": "Premium recycled polyester, 5 panel crown, Packable bill, Laser cut side panels, Plush headband, Woven nylon elastic backstrap with plastic clip, Locker loop",
+        "fabric_details": "100% Recycled Polyester",
+        "other_details": "The Venture Air 5 Panel Lightweight Hat is the ultimate adventure companion. Laser cut holes offer superior breathability & the plush headband will absorb and wick away sweat. Did we mention this hat is amphibious? Go ahead, dunk it, swim in it, the water is your friend! It's travel friendly, too. The flexible, packable bill allows you to roll this thing up like a burrito and stash it in your bag without compromising its shape. To dial in the perfect fit and add comfort, we added a slight stretch to the nylon cinch system. We won't make any guarantees, but we'd like to think this hat will be the first one you grab for your next adventure.",
+        "price": 49.95
+      },
+      "processed_at": "2025-03-11T16:43:44.440995"
+    },
+    {
+      "product_id": 35,
+      "url": "https://ketlmtn.com/products/canyon-liner-short",
+      "extracted_data": {
+        "product_line_id": 15,
+        "category_id": 9,
+        "product_name": "Canyon MTB Chamois Liner Shorts",
+        "available_colors": [
+          "Black Topo"
+        ],
+        "available_sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "available_inseams": null,
+        "product_features": "10mm thick Italian made quadruple layer chamois, Central channel to relieve taint pain, Leg grippers, Superior moisture management",
+        "fabric_details": "77% Polyamide, 23% Elastane, Weight: 134g (taken from size medium)",
+        "other_details": "At the core of any efficient mountain biking kit is a basic chamois liner short - ours is anything but basic. Featuring an Italian made quadruple layer chamois meticulously engineered to provide exceptional comfort and support during long rides. The Canyon Liner Short is crafted using lightweight, breathable materials and designed to be worn under an overshort and provide just the right amount of compression without being constricting. We understand the importance of comfort and staying dry which is why we chose superior moisture-wicking technology, ensuring that sweat is quickly and efficiently pulled away from your skin, leaving you feeling fresh and your taint relieved.",
+        "price": 84.95
+      },
+      "processed_at": "2025-03-11T16:43:46.411630"
+    },
+    {
+      "product_id": 36,
+      "url": "https://ketlmtn.com/products/for-funs-sake-tri-blend-tech-tee",
+      "extracted_data": {
+        "product_line_id": 8,
+        "category_id": 4,
+        "product_name": "For Fun's Sake Tri-Blend Tech Tee",
+        "available_colors": [
+          "Charcoal Grey"
+        ],
+        "available_sizes": [
+          "Small",
+          "Medium",
+          "Large",
+          "X-Large",
+          "2X-Large"
+        ],
+        "available_inseams": null,
+        "product_features": "Super soft,Magical powers are subjective...",
+        "fabric_details": "50% Polyester,25% Cotton,25% Rayon,Weight: 138 (taken from size medium)",
+        "other_details": "This astonishingly soft and lightweight tech tee is perfect for rambunctious adventure and casual wear alike. It's super soft & as comfortable as they come plus it provides the wearer with magical powers. Also, a friendly reminder to do something that excites you, and maybe even scares you a little bit. So get off your a$$, for fun's sake :)",
+        "price": 29.95
+      },
+      "processed_at": "2025-03-11T16:43:48.229774"
+    },
+    {
+      "product_id": 37,
+      "url": "https://ketlmtn.com/products/ketl-mtn-gift-card",
+      "extracted_data": {
+        "product_line_id": null,
+        "category_id": 3,
+        "product_name": null,
+        "available_colors": null,
+        "available_sizes": [
+          "$25.00",
+          "$50.00",
+          "$75.00",
+          "$100.00",
+          "$150.00",
+          "$250.00",
+          "$500.00"
+        ],
+        "available_inseams": null,
+        "product_features": null,
+        "fabric_details": null,
+        "other_details": "Shopping for the adventure traveler in your life who wants to pick out their own gear? A KETL Mtn. gift card is the perfect choice. Gift cards are delivered by email with instructions on how to redeem the code.",
+        "price": 25.0
+      },
+      "processed_at": "2025-03-11T16:43:49.651915"
+    },
+    {
+      "product_id": 38,
+      "url": "https://ketlmtn.com/products/venture-far-laugh-hard-tri-blend-tech-tee",
+      "extracted_data": {
+        "product_line_id": 9,
+        "category_id": 4,
+        "product_name": "Venture Far Laugh Hard Tri-Blend Tech Tee",
+        "available_colors": [
+          "Charcoal Grey"
+        ],
+        "available_sizes": [
+          "Small",
+          "Medium",
+          "Large",
+          "X-Large",
+          "2X-Large"
+        ],
+        "available_inseams": null,
+        "product_features": "Super soft, Magical powers are subjective...",
+        "fabric_details": "50% Polyester, 25% Cotton, 25% Rayon, Weight: 138 (taken from size medium)",
+        "other_details": "This is an astonishingly soft and lightweight tech tee is perfect for rambunctious adventure and casual wear alike. It's super soft & as comfortable as they come plus it provides the wearer with magical powers. Also, a friendly reminder to do something that excites you, and maybe even scares you a little bit. So get off your a$$, for fun's sake :)",
+        "price": 29.95
+      },
+      "processed_at": "2025-03-11T16:43:51.326343"
+    },
+    {
+      "product_id": 39,
+      "url": "https://ketlmtn.com/products/rambler-lightweight-travel-hat",
+      "extracted_data": {
+        "product_line_id": null,
+        "category_id": 10,
+        "product_name": "Rambler Lightweight Travel Hat",
+        "available_colors": [
+          "Green"
+        ],
+        "available_sizes": [
+          "One Size"
+        ],
+        "available_inseams": null,
+        "product_features": "Premium recycled polyester, Packable bill, Laser cut panels, Plush headband, Woven nylon elastic backstrap with plastic clip, Internal flap for added structure, Locker loop",
+        "fabric_details": "100% Recycled Polyester",
+        "other_details": "The Rambler Lightweight Travel Hat is your ultimate adventure companion! With precision laser-cut holes, this hat ensures superior breathability, keeping you cool as a cucumber while the super plush headband absorbs and wicks away sweat Did we mention this hat is amphibious too? Worry no more about water. Its travel friendly too. The packable bill allows you to roll this thing up like a burrito and stash it in your bag without compromising its shape. To dial in the perfect fit and add comfort, we added a slight stretch to the nylon cinch system. We won't make any guarantees, but we'd like to think this hat will be the first one you grab for your next adventure.",
+        "price": 49.95
+      },
+      "processed_at": "2025-03-11T16:43:53.249836"
+    },
+    {
+      "product_id": 40,
+      "url": "https://ketlmtn.com/products/egg-cradle-boxer-briefs",
+      "extracted_data": {
+        "product_line_id": null,
+        "category_id": 11,
+        "product_name": "Egg Cradle Boxer Briefs 5\"",
+        "available_colors": [
+          "Green",
+          "Black"
+        ],
+        "available_sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "available_inseams": [
+          "5\""
+        ],
+        "product_features": "Lightweight, Super stretchy, Breathable mesh, Soft to the touch, Leg grippers prevent ride up",
+        "fabric_details": "78% Nylon SOFTCOOL, 12% Nylon, 10% Spandex, Weight: 67g, Fabric weight: 130gsm",
+        "other_details": "Say hello to the Egg Cradle 5\" Boxer Briefs\u2014the perfect nest for your prized possessions. Lightweight and breathable, these bad boys ensure you stay cool under pressure, whether you're hitting the trail, hitting the gym, or just hitting snooze. With leg grippers designed to stay put, you can enjoy all-day comfort without the hassle of ride-up. Comfort so good, your eggs might just write you a thank-you note.",
+        "price": 29.95
+      },
+      "processed_at": "2025-03-11T16:43:55.215349"
+    },
+    {
+      "product_id": 41,
+      "url": "https://ketlmtn.com/products/egg-cradle-boxer-briefs-8",
+      "extracted_data": {
+        "product_line_id": null,
+        "category_id": 11,
+        "product_name": "Egg Cradle Boxer Briefs 8\"",
+        "available_colors": [
+          "Green",
+          "Black"
+        ],
+        "available_sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "available_inseams": [
+          "8\""
+        ],
+        "product_features": "Lightweight, Super stretchy, Breathable mesh, Soft to the touch, Leg grippers prevent ride up",
+        "fabric_details": "78% Nylon SOFTCOOL, 12% Nylon, 10% Spandex, Weight: 72g, Fabric weight: 130gsm",
+        "other_details": "Say hello to the Egg Cradle 5\" Boxer Briefs\u2014the perfect nest for your prized possessions. Lightweight and breathable, these bad boys ensure you stay cool under pressure, whether you're hitting the trail, hitting the gym, or just hitting snooze. With leg grippers designed to stay put, you can enjoy all-day comfort without the hassle of ride-up. Comfort so good, your eggs might just write you a thank-you note. If you have not tried the briefs on, we will process a free return. If you have tried briefs on, we will process a one time free exchange and you can keep the briefs... you filthy animal.",
+        "price": 29.95
+      },
+      "processed_at": "2025-03-11T16:43:57.267000"
+    },
+    {
+      "product_id": 42,
+      "url": "https://ketlmtn.com/products/ketl-mtn-for-funs-sake-tech-tank",
+      "extracted_data": {
+        "product_line_id": 8,
+        "category_id": 4,
+        "product_name": "For Fun's Sake Tri-Blend Tech Tank",
+        "available_colors": [
+          "Charcoal Grey"
+        ],
+        "available_sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "available_inseams": null,
+        "product_features": "Super soft, Magical powers are subjective...",
+        "fabric_details": "60% Polyester, 40% Cotton, Weight: 138 (taken from size medium)",
+        "other_details": "This is an\u00a0astonishingly soft and lightweight tech tank top perfect for those toasty days when you're looking to show off those arms.\u00a0It's super soft & as comfortable as they come plus it provides the wearer with magical powers. Also, a friendly reminder to do something that excites you, and maybe even\u00a0scares you a little bit. So get off your a$$, for fun's sake :)",
+        "price": 29.95
+      },
+      "processed_at": "2025-03-11T16:43:59.099979"
+    },
+    {
+      "product_id": 43,
+      "url": "https://ketlmtn.com/products/atlas-hat",
+      "extracted_data": {
+        "product_line_id": null,
+        "category_id": 10,
+        "product_name": "Atlas Hat",
+        "available_colors": [
+          "Navy"
+        ],
+        "available_sizes": [
+          "One Size"
+        ],
+        "available_inseams": null,
+        "product_features": "Quick drying rugged 100% nylon fabric,Woven nylon backstrap with plastic clip,Embroidered eyelets",
+        "fabric_details": "100% Nylon",
+        "other_details": "We brought the OG hat back! This hat sits great on your dome piece, not too high and not too low. Dial in the perfect fit with the nylon backstrap and remember, all adventures are possible when you're wearing this hat.",
+        "price": 29.95
+      },
+      "processed_at": "2025-03-11T16:44:00.526846"
+    },
+    {
+      "product_id": 44,
+      "url": "https://ketlmtn.com/products/ketl-mtn-venture-far-laugh-hard-tech-tank",
+      "extracted_data": {
+        "product_line_id": 9,
+        "category_id": 4,
+        "product_name": "Venture Far Laugh Hard Tri-Blend Tech Tank",
+        "available_colors": [
+          "Charcoal Grey"
+        ],
+        "available_sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "available_inseams": null,
+        "product_features": "Super soft, Magical powers are subjective...",
+        "fabric_details": "60% Polyester, 40% Cotton, Weight: 138 (taken from size medium)",
+        "other_details": "This is an\u00a0astonishingly soft and lightweight tech tank top perfect for those toasty days when you're looking to show off those arms.\u00a0It's super soft & as comfortable as they come & it provides the wearer with magical powers\u00a0while reminding\u00a0you to venture far and laugh hard.",
+        "price": 29.95
+      },
+      "processed_at": "2025-03-11T16:44:02.157023"
+    }
+  ]
