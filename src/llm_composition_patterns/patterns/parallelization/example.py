@@ -27,6 +27,7 @@ tracer = trace.get_tracer("parallelization")  # type: ignore
 
 # Now import the rest of the modules that might use Groq
 from llm_composition_patterns.common.groq_helpers import run_llm_async
+from pydantic import BaseModel, Field
 
 # Define supported languages and their models
 SUPPORTED_LANGUAGES = {
@@ -36,6 +37,20 @@ SUPPORTED_LANGUAGES = {
     "Japanese": "qwen-2.5-32b",
     "Arabic": "mistral-saba-24b"
 }
+
+
+class ProductDetails(BaseModel):
+    """Pydantic model for product details."""
+    name: str
+    features: str
+    fabric: str
+
+
+class TranslatedProduct(BaseModel):
+    """Pydantic model for translated product."""
+    product_id: int
+    original: ProductDetails
+    translations: Dict[str, ProductDetails] = Field(default_factory=dict)
 
 
 def load_products() -> List[Dict]:
@@ -73,32 +88,46 @@ def get_product_by_id(product_id: int, products: List[Dict]) -> Optional[Dict]:
     return None
 
 
-async def translate_text(text: str, language: str, model: str) -> str:
+async def translate_product_details(product_details: ProductDetails, language: str, model: str) -> ProductDetails:
     """
-    Translate text to the target language using the specified model.
+    Translate all product details to the target language using a single LLM call.
     
     Args:
-        text: Text to translate
+        product_details: ProductDetails object with original text
         language: Target language
         model: LLM model to use
         
     Returns:
-        Translated text
+        ProductDetails object with translated text
     """
     # Create a span for this specific translation
     with tracer.start_as_current_span(f"translate_to_{language}") as span:
         span.set_attribute("language", language)
         span.set_attribute("model", model)
-        span.set_attribute("text_length", len(text))
         
         system_prompt = f"""
         You are a professional translator specializing in outdoor apparel terminology.
-        Translate the provided text into {language}.
+        Translate the provided product details from English to {language}.
         
-        ONLY respond with the translated text, nothing else.
+        ONLY respond with valid JSON in this exact format:
+        {{
+            "name": "translated product name",
+            "features": "translated product features",
+            "fabric": "translated fabric details"
+        }}
+        
+        Maintain the same tone and style as the original text.
         """
         
-        user_prompt = f"Translate this text to {language}: {text}"
+        user_prompt = f"""
+        Translate these product details to {language}:
+        
+        Product Name: {product_details.name}
+        Product Features: {product_details.features}
+        Fabric Details: {product_details.fabric}
+        
+        Return ONLY the JSON with the translated content.
+        """
         
         try:
             response = await run_llm_async(
@@ -106,19 +135,40 @@ async def translate_text(text: str, language: str, model: str) -> str:
                 system_prompt=system_prompt,
                 model=model
             )
-            result = response.strip() if response else ""
-            span.set_attribute("success", True)
-            span.set_attribute("result_length", len(result))
-            return result
+            
+            # Parse the JSON response
+            try:
+                json_response = json.loads(response)
+                translated = ProductDetails(
+                    name=json_response.get("name", "Translation error"),
+                    features=json_response.get("features", "Translation error"),
+                    fabric=json_response.get("fabric", "Translation error")
+                )
+                span.set_attribute("success", True)
+                return translated
+            except json.JSONDecodeError as e:
+                span.set_attribute("success", False)
+                span.set_attribute("error", f"JSON parse error: {str(e)}")
+                print(f"Error parsing translation response: {e}")
+                return ProductDetails(
+                    name="Translation error (JSON parse failed)",
+                    features="Translation error (JSON parse failed)",
+                    fabric="Translation error (JSON parse failed)"
+                )
+                
         except Exception as e:
             error_msg = str(e)
             span.set_attribute("success", False)
             span.set_attribute("error", error_msg)
             print(f"Translation error: {e}")
-            return f"Error: {error_msg}"
+            return ProductDetails(
+                name=f"Error: {error_msg}",
+                features=f"Error: {error_msg}",
+                fabric=f"Error: {error_msg}"
+            )
 
 
-async def translate_product(product_id: int, languages: List[str], products: List[Dict]) -> Dict[str, Any]:
+async def translate_product(product_id: int, languages: List[str], products: List[Dict]) -> TranslatedProduct:
     """
     Translate a product's details into multiple languages in parallel.
     
@@ -128,7 +178,7 @@ async def translate_product(product_id: int, languages: List[str], products: Lis
         products: List of product dictionaries
         
     Returns:
-        Dictionary with original product and translations
+        TranslatedProduct object with original and translations
     """
     # Create a parent span for the entire product translation process
     with tracer.start_as_current_span("translate_product") as parent_span:
@@ -141,7 +191,11 @@ async def translate_product(product_id: int, languages: List[str], products: Lis
         if not product:
             parent_span.set_attribute("error", f"Product ID {product_id} not found")
             parent_span.set_attribute("success", False)
-            return {"error": f"Product ID {product_id} not found"}
+            # Return an empty TranslatedProduct with an error message
+            return TranslatedProduct(
+                product_id=product_id,
+                original=ProductDetails(name=f"Product ID {product_id} not found", features="", fabric="")
+            )
         
         # Extract product details from the nested structure
         extracted_data = product.get("extracted_data", {})
@@ -149,93 +203,76 @@ async def translate_product(product_id: int, languages: List[str], products: Lis
         product_features = extracted_data.get("product_features", "")
         fabric_details = extracted_data.get("fabric_details", "")
         
+        # Create original product details
+        original_details = ProductDetails(
+            name=product_name,
+            features=product_features,
+            fabric=fabric_details
+        )
+        
         parent_span.set_attribute("product_name", product_name)
         print(f"Translating product: {product_name}")
         
-        # Create tasks for all translations
+        # Create a TranslatedProduct object
+        result = TranslatedProduct(
+            product_id=product_id,
+            original=original_details
+        )
+        
+        # Create tasks for all translations (one per language)
         tasks = []
         for language in languages:
             if language not in SUPPORTED_LANGUAGES:
                 continue
                 
             model = SUPPORTED_LANGUAGES[language]
-            
-            # Create translation tasks for each field
-            name_task = translate_text(product_name, language, model)
-            features_task = translate_text(product_features, language, model)
-            fabric_task = translate_text(fabric_details, language, model)
-            
-            tasks.append((language, "name", name_task))
-            tasks.append((language, "features", features_task))
-            tasks.append((language, "fabric", fabric_task))
-        
-        # Execute all translations in parallel
-        result: Dict[str, Any] = {
-            "product_id": product_id,
-            "original": {
-                "name": product_name,
-                "features": product_features,
-                "fabric": fabric_details
-            },
-            "translations": {}
-        }
-        
-        # Initialize translation structure
-        for language in languages:
-            if language in SUPPORTED_LANGUAGES:
-                translations_dict = cast(Dict[str, Dict[str, str]], result["translations"])
-                translations_dict[language] = {}
+            tasks.append((language, translate_product_details(original_details, language, model)))
         
         # Await all translation tasks
-        for language, field, task in tasks:
+        for language, task in tasks:
             try:
-                translated_text = await task
-                translations_dict = cast(Dict[str, Dict[str, str]], result["translations"])
-                translations_dict[language][field] = translated_text
+                translated_details = await task
+                result.translations[language] = translated_details
             except Exception as e:
-                print(f"Error processing {field} translation to {language}: {e}")
-                translations_dict = cast(Dict[str, Dict[str, str]], result["translations"])
-                translations_dict[language][field] = "Translation error"
+                print(f"Error processing translation to {language}: {e}")
+                result.translations[language] = ProductDetails(
+                    name="Translation error",
+                    features="Translation error",
+                    fabric="Translation error"
+                )
         
         # Add final attributes to parent span
         parent_span.set_attribute("success", True)
-        parent_span.set_attribute("languages_completed", len(result["translations"]))
-        parent_span.set_attribute("fields_per_language", 3)  # name, features, fabric
+        parent_span.set_attribute("languages_completed", len(result.translations))
         
         return result
 
 
-def format_translation_result(result: Dict) -> str:
+def format_translation_result(result: TranslatedProduct) -> str:
     """
     Format translation result for display with English version for comparison.
     
     Args:
-        result: Translation result dictionary
+        result: TranslatedProduct object
         
     Returns:
         Formatted string for display
     """
-    if "error" in result:
-        return f"Error: {result['error']}"
-    
-    output = [f"Product ID: {result['product_id']}", f"Original Name: {result['original']['name']}\n"]
+    output = [f"Product ID: {result.product_id}", f"Original Name: {result.original.name}\n"]
     
     # Add English (original) section first
     output.append("=== English (Original) ===")
-    output.append(f"Name: {result['original']['name']}")
-    output.append(f"Features: {result['original']['features']}")
-    output.append(f"Fabric: {result['original']['fabric']}")
+    output.append(f"Name: {result.original.name}")
+    output.append(f"Features: {result.original.features}")
+    output.append(f"Fabric: {result.original.fabric}")
     output.append("")  # Empty line between languages
     
     # Add translations for each language
-    for language, translations in result["translations"].items():
+    for language, translation in result.translations.items():
         output.append(f"=== {language} ===")
-        for field, text in translations.items():
-            # Show original English text alongside the translation for comparison
-            original_text = result['original'][field]
-            output.append(f"{field.capitalize()}: {text}")
-            output.append(f"  Original: {original_text}")
-            output.append("")  # Add space between fields for readability
+        output.append(f"Name: {translation.name}")
+        output.append(f"Features: {translation.features}")
+        output.append(f"Fabric: {translation.fabric}")
         output.append("")  # Empty line between languages
     
     return "\n".join(output)
