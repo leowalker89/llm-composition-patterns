@@ -12,12 +12,22 @@ import json
 from typing import Dict, List, Optional, Tuple, Union, Any
 from pathlib import Path
 from dotenv import load_dotenv
+# Load environment variables
+load_dotenv()
 
+# Add these lines to enable tracing
+from llm_composition_patterns.common.arize_phoenix_setup import enable_tracing_for_pattern
+from opentelemetry import trace  # type: ignore
+
+# Enable tracing for this pattern - must be done before importing any modules that use Groq
+tracer_provider = enable_tracing_for_pattern("prompt_chaining")  # type: ignore
+tracer = trace.get_tracer("prompt_chaining")  # type: ignore  # Get a tracer for creating spans
+
+# Now import the rest of the modules
 from llm_composition_patterns.common.groq_helpers import run_llm
 from llm_composition_patterns.common.message_types import ChatMessage
 
-# Load environment variables
-load_dotenv()
+
 
 
 def load_product_data() -> List[Dict]:
@@ -202,7 +212,7 @@ def step3_format_response(product_info: str) -> str:
     return response
 
 
-def process_customer_query(user_query: str, conversation_history: Optional[List[ChatMessage]] = None) -> Tuple[str, List[ChatMessage]]:
+def process_customer_query(user_query: str, conversation_history: Optional[List[ChatMessage]] = None) -> Tuple[str, List[ChatMessage]]:  # type: ignore
     """
     Process a customer query through the 3-step prompt chain.
     
@@ -219,27 +229,48 @@ def process_customer_query(user_query: str, conversation_history: Optional[List[
     if conversation_history is None:
         conversation_history = []
     
-    # Step 1: Validate query
-    is_valid, explanation = step1_validate_query(user_query)
-    
-    if not is_valid:
-        response = f"I'm sorry, but I can only assist with questions related to KETL Mtn. Apparel products and services. {explanation}"
+    # Create a parent span for the entire prompt chain
+    with tracer.start_as_current_span("prompt_chain") as parent_span:  # type: ignore
+        # Add attributes to the parent span
+        parent_span.set_attribute("user_query", user_query)
+        parent_span.set_attribute("pattern", "prompt_chaining")
+        
+        # Step 1: Validate query
+        with tracer.start_as_current_span("step1_validate_query") as span:
+            span.set_attribute("step", "validate_query")
+            is_valid, explanation = step1_validate_query(user_query)
+            span.set_attribute("is_valid", is_valid)
+            span.set_attribute("explanation", explanation)
+        
+        if not is_valid:
+            response = f"I'm sorry, but I can only assist with questions related to KETL Mtn. Apparel products and services. {explanation}"
+            # Add the interaction to conversation history
+            conversation_history.append({"role": "user", "content": user_query})
+            conversation_history.append({"role": "assistant", "content": response})
+            parent_span.set_attribute("early_exit", True)
+            return response, conversation_history
+        
+        # Step 2: Look up product information
+        with tracer.start_as_current_span("step2_lookup_product_info") as span:
+            span.set_attribute("step", "lookup_product_info")
+            product_info = step2_lookup_product_info(user_query, conversation_history)
+            span.set_attribute("product_info_length", len(product_info))
+        
+        # Step 3: Format response in brand voice
+        with tracer.start_as_current_span("step3_format_response") as span:
+            span.set_attribute("step", "format_response")
+            final_response = step3_format_response(product_info)
+            span.set_attribute("response_length", len(final_response))
+        
         # Add the interaction to conversation history
         conversation_history.append({"role": "user", "content": user_query})
-        conversation_history.append({"role": "assistant", "content": response})
-        return response, conversation_history
-    
-    # Step 2: Look up product information
-    product_info = step2_lookup_product_info(user_query, conversation_history)
-    
-    # Step 3: Format response in brand voice
-    final_response = step3_format_response(product_info)
-    
-    # Add the interaction to conversation history
-    conversation_history.append({"role": "user", "content": user_query})
-    conversation_history.append({"role": "assistant", "content": final_response})
-    
-    return final_response, conversation_history
+        conversation_history.append({"role": "assistant", "content": final_response})
+        
+        # Add final attributes to parent span
+        parent_span.set_attribute("completed", True)
+        parent_span.set_attribute("steps_completed", 3)
+        
+        return final_response, conversation_history
 
 
 def main():

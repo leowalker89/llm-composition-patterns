@@ -16,11 +16,22 @@ from typing import Dict, List, Optional, Tuple, Union, Any, Literal
 from pathlib import Path
 from dotenv import load_dotenv
 
+# Load environment variables first
+load_dotenv()
+
+# Add these lines to enable tracing - BEFORE importing any modules that use Groq
+from llm_composition_patterns.common.arize_phoenix_setup import enable_tracing_for_pattern
+from opentelemetry import trace  # type: ignore
+
+# Enable tracing for this pattern - must be done before importing any modules that use Groq
+tracer_provider = enable_tracing_for_pattern("routing")  # type: ignore
+tracer = trace.get_tracer("routing")  # type: ignore
+
+# Now import the rest of the modules that might use Groq
 from llm_composition_patterns.common.groq_helpers import run_llm
 from llm_composition_patterns.common.message_types import ChatMessage
 
-# Load environment variables
-load_dotenv()
+
 
 # Define query types for routing
 QueryType = Literal["product", "company", "warranty", "unclear"]
@@ -348,29 +359,52 @@ def process_customer_query(user_query: str, conversation_history: Optional[List[
     if conversation_history is None:
         conversation_history = []
     
-    # Step 1: Classify the query
-    query_type, confidence, explanation = classify_query(user_query)
-    
-    # Step 2: Route to the appropriate handler
-    if query_type == "product":
-        raw_response = handle_product_query(user_query, conversation_history)
-    elif query_type == "company":
-        raw_response = handle_company_query(user_query, conversation_history)
-    elif query_type == "warranty":
-        raw_response = handle_warranty_query(user_query, conversation_history)
-    else:  # "unclear"
-        # For unclear queries, use the explanation from the classifier
-        # and add a request for clarification
-        raw_response = f"{explanation} Could you please clarify if you're asking about our products, our company, or our warranty/repair process?"
-    
-    # Step 3: Format the response in brand voice (for all responses)
-    final_response = format_response(raw_response)
-    
-    # Add the interaction to conversation history
-    conversation_history.append({"role": "user", "content": user_query})
-    conversation_history.append({"role": "assistant", "content": final_response})
-    
-    return final_response, conversation_history
+    # Create a parent span for the entire routing process
+    with tracer.start_as_current_span("routing_pattern") as parent_span:
+        parent_span.set_attribute("user_query", user_query)
+        parent_span.set_attribute("pattern", "routing")
+        
+        # Step 1: Classify the query
+        with tracer.start_as_current_span("step1_classify_query") as span:
+            span.set_attribute("step", "classify_query")
+            query_type, confidence, explanation = classify_query(user_query)
+            span.set_attribute("query_type", query_type)
+            span.set_attribute("confidence", confidence)
+            span.set_attribute("explanation", explanation)
+        
+        # Step 2: Route to the appropriate handler
+        with tracer.start_as_current_span("step2_handle_query") as span:
+            span.set_attribute("step", "handle_query")
+            span.set_attribute("handler", query_type)
+            
+            if query_type == "product":
+                raw_response = handle_product_query(user_query, conversation_history)
+            elif query_type == "company":
+                raw_response = handle_company_query(user_query, conversation_history)
+            elif query_type == "warranty":
+                raw_response = handle_warranty_query(user_query, conversation_history)
+            else:  # "unclear"
+                # For unclear queries, use the explanation from the classifier
+                # and add a request for clarification
+                raw_response = f"{explanation} Could you please clarify if you're asking about our products, our company, or our warranty/repair process?"
+            
+            span.set_attribute("response_length", len(raw_response))
+        
+        # Step 3: Format the response in brand voice (for all responses)
+        with tracer.start_as_current_span("step3_format_response") as span:
+            span.set_attribute("step", "format_response")
+            final_response = format_response(raw_response)
+            span.set_attribute("response_length", len(final_response))
+        
+        # Add the interaction to conversation history
+        conversation_history.append({"role": "user", "content": user_query})
+        conversation_history.append({"role": "assistant", "content": final_response})
+        
+        # Add final attributes to parent span
+        parent_span.set_attribute("completed", True)
+        parent_span.set_attribute("steps_completed", 3)
+        
+        return final_response, conversation_history
 
 
 def main() -> None:
