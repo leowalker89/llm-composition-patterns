@@ -26,7 +26,7 @@ load_dotenv()
 QueryType = Literal["product", "company", "warranty", "unclear"]
 
 
-def load_product_data() -> List[Dict]:
+def load_product_data() -> List[Dict[str, Any]]:
     """
     Load product data from the JSON file.
     
@@ -373,7 +373,7 @@ def process_customer_query(user_query: str, conversation_history: Optional[List[
     return final_response, conversation_history
 
 
-def main():
+def main() -> None:
     """Run an example of the routing pattern workflow."""
     print("KETL Mtn. Apparel Customer Service Bot (Routing Pattern)")
     print("-----------------------------------------------------")

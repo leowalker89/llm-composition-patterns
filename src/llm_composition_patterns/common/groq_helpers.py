@@ -48,3 +48,48 @@ def run_llm(
     )
 
     return response.choices[0].message.content
+
+async def run_llm_async(
+    user_prompt: str, 
+    system_prompt: str = "", 
+    model: str = "llama-3.1-8b-instant", 
+    message_history: Optional[List[Dict[str, str]]] = None
+) -> Optional[str]:
+    """
+    Run an LLM asynchronously using the Groq API.
+    
+    Args:
+        user_prompt: The user's prompt
+        system_prompt: The system prompt (optional)
+        model: The model to use (default: "llama-3.1-8b-instant")
+        message_history: Optional conversation history
+        
+    Returns:
+        The model's response text or None if an error occurs
+    """
+    import groq
+    from os import getenv
+    
+    client = groq.AsyncClient(api_key=getenv("GROQ_API_KEY"))
+    
+    messages: Any = []
+    
+    # Add system message
+    if system_prompt:
+        messages.append({"role": "system", "content": system_prompt})
+    
+    # Add message history if provided
+    if message_history:
+        messages.extend(message_history)
+    
+    # Add user message
+    messages.append({"role": "user", "content": user_prompt})
+    
+    # Call the API
+    chat_completion = await client.chat.completions.create(
+        messages=messages,
+        model=model,
+    )
+    
+    # Return the response text
+    return chat_completion.choices[0].message.content
