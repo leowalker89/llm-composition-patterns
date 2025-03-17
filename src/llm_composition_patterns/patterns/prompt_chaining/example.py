@@ -62,30 +62,30 @@ def load_brand_voice() -> str:
         return ""
 
 
-def step1_validate_query(user_query: str) -> Tuple[bool, str]:
+def step1_filter_query_relevance(user_query: str) -> Tuple[bool, str]:
     """
-    Validate if the query is appropriate and related to KETL Mtn. products.
+    Filter the query to determine if it's relevant to KETL Mtn. products.
     
     Args:
         user_query: The customer's question or request
         
     Returns:
         Tuple containing:
-            - Boolean indicating if query is valid
+            - Boolean indicating if query is relevant
             - Explanation message
     """
     system_prompt = """
-    You are a query validator for KETL Mtn. Apparel, an outdoor gear company specializing in 
+    You are a query relevance filter for KETL Mtn. Apparel, an outdoor gear company specializing in 
     lightweight, packable, breathable, and durable products for adventure and travel.
     
     Your task is to determine if a customer query is related to KETL Mtn. products, 
     services, outdoor activities, or general information about the company.
     
     ONLY respond with one of these options:
-    - "valid" - if the query is related to KETL Mtn. products, outdoor activities, or appropriate
-    - "invalid" - if the query is inappropriate or completely unrelated to outdoor gear
+    - "relevant" - if the query is related to KETL Mtn. products, outdoor activities, or appropriate
+    - "not relevant" - if the query is inappropriate or completely unrelated to outdoor gear
     
-    Valid queries include:
+    Relevant queries include:
     - Questions about KETL Mtn. products (hats, tops, shorts, pants, etc.)
     - Questions about product features, materials, or pricing
     - Questions about the company's values or practices
@@ -93,10 +93,10 @@ def step1_validate_query(user_query: str) -> Tuple[bool, str]:
     - Questions about product recommendations for specific activities or conditions
     
     BE PERMISSIVE - if the query could reasonably be interpreted as related to outdoor 
-    activities or apparel, consider it valid.
+    activities or apparel, consider it relevant.
     """
     
-    user_prompt = f"Is this query appropriate and related to KETL Mtn. Apparel or outdoor activities? '{user_query}'"
+    user_prompt = f"Is this query relevant to KETL Mtn. Apparel or outdoor activities? '{user_query}'"
     
     response = run_llm(
         user_prompt=user_prompt,
@@ -104,10 +104,10 @@ def step1_validate_query(user_query: str) -> Tuple[bool, str]:
         model="llama-3.1-8b-instant"  # Using Llama Guard for content moderation
     )
     
-    # Clean up response and check if valid
+    # Clean up response and check if relevant
     response_text = response.strip().lower()
     
-    if "valid" in response_text and "invalid" not in response_text:
+    if "relevant" in response_text and "not relevant" not in response_text:
         return True, "Query is related to outdoor apparel or activities."
     else:
         return False, "Query does not appear to be related to KETL Mtn. products or outdoor activities."
@@ -162,7 +162,7 @@ def step2_lookup_product_info(user_query: str, conversation_history: Optional[Li
     return response
 
 
-def step3_format_response(product_info: str) -> str:
+def step3_brand_format_response(product_info: str) -> str:
     """
     Format the response according to KETL Mtn.'s brand voice.
     
@@ -235,14 +235,14 @@ def process_customer_query(user_query: str, conversation_history: Optional[List[
         parent_span.set_attribute("user_query", user_query)
         parent_span.set_attribute("pattern", "prompt_chaining")
         
-        # Step 1: Validate query
-        with tracer.start_as_current_span("step1_validate_query") as span:
-            span.set_attribute("step", "validate_query")
-            is_valid, explanation = step1_validate_query(user_query)
-            span.set_attribute("is_valid", is_valid)
+        # Step 1: Filter query for relevance
+        with tracer.start_as_current_span("step1_filter_query_relevance") as span:
+            span.set_attribute("step", "filter_query_relevance")
+            is_relevant, explanation = step1_filter_query_relevance(user_query)
+            span.set_attribute("is_relevant", is_relevant)
             span.set_attribute("explanation", explanation)
         
-        if not is_valid:
+        if not is_relevant:
             response = f"I'm sorry, but I can only assist with questions related to KETL Mtn. Apparel products and services. {explanation}"
             # Add the interaction to conversation history
             conversation_history.append({"role": "user", "content": user_query})
@@ -256,10 +256,10 @@ def process_customer_query(user_query: str, conversation_history: Optional[List[
             product_info = step2_lookup_product_info(user_query, conversation_history)
             span.set_attribute("product_info_length", len(product_info))
         
-        # Step 3: Format response in brand voice
-        with tracer.start_as_current_span("step3_format_response") as span:
-            span.set_attribute("step", "format_response")
-            final_response = step3_format_response(product_info)
+        # Step 3: Brand format response in brand voice
+        with tracer.start_as_current_span("step3_brand_format_response") as span:
+            span.set_attribute("step", "brand_format_response")
+            final_response = step3_brand_format_response(product_info)
             span.set_attribute("response_length", len(final_response))
         
         # Add the interaction to conversation history
