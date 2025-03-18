@@ -4,6 +4,8 @@
 
 The Parallelization pattern executes multiple LLM tasks simultaneously, reducing overall processing time. This pattern is useful when a task can be broken down into independent subtasks that don't rely on each other's outputs. By running these tasks in parallel rather than sequentially, the system can provide faster responses, especially for complex operations.
 
+![Parallelization Pattern Diagram](./Parallelization.jpg)
+
 ## Implementation
 
 This example demonstrates a parallelization pattern for translating KETL Mtn. Apparel product details:
