@@ -15,11 +15,17 @@ The repository includes the following patterns:
 ### [Parallelization](src/llm_composition_patterns/patterns/parallelization/)
 Executing multiple LLM tasks concurrently to reduce total processing time. Demonstrated through product description translation into multiple languages simultaneously.
 
+![Parallelization Pattern](src/llm_composition_patterns/patterns/parallelization/Parallelization.jpg)
+
 ### [Prompt Chaining](src/llm_composition_patterns/patterns/prompt_chaining/)
 Creating a workflow where the output of one LLM call becomes the input for the next, forming a sequential chain. Demonstrated through a customer service chatbot that filters, processes, and formats responses.
 
+![Prompt Chaining Pattern](src/llm_composition_patterns/patterns/prompt_chaining/Prompt_Chaining.jpg)
+
 ### [Routing](src/llm_composition_patterns/patterns/routing/)
 Directing user queries to specialized handlers based on the type of information requested. Demonstrated through a customer service chatbot that routes questions to product, company, or warranty specialists.
+
+![Routing Pattern](src/llm_composition_patterns/patterns/routing/Router.jpg)
 
 ### [Evaluator-Optimizer](src/llm_composition_patterns/patterns/evaluator_optimizer/)
 Implementing an iterative improvement cycle where content is repeatedly generated, evaluated, and refined. Demonstrated through generating and refining sales pitches based on quality criteria.
