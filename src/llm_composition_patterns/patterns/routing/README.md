@@ -4,16 +4,68 @@
 
 The Routing pattern directs user queries to specialized handlers based on the type of information requested. This pattern is useful when different types of queries require different data sources, models, or processing approaches. By classifying queries first, the system can provide more accurate and efficient responses.
 
-## Implementation
+![Routing Pattern Diagram](./Router.jpg)
+
+## Implementation Details
 
 This example demonstrates a routing pattern for a KETL Mtn. Apparel customer service chatbot:
 
-1. **Query Classification**: Uses a small, efficient model to determine the query type (product, company, warranty, or unclear)
-2. **Specialized Handlers**: Routes to different handlers based on the classification:
-   - Product information handler (uses product database)
-   - Company information handler (uses company information)
-   - Warranty information handler (uses warranty/guarantee information)
-3. **Response Formatting**: Formats all responses in KETL Mtn.'s brand voice for consistency
+1. **Query Classification** (`classify_query`): Analyzes the user query to determine its type (product, company, warranty, or unclear)
+2. **Specialized Handlers**: Routes to different handler functions based on the classification:
+   - `handle_product_query`: Processes product information requests using the product database
+   - `handle_company_query`: Handles questions about KETL Mtn. as a company
+   - `handle_warranty_query`: Provides information about warranty and repair services
+3. **Response Formatting**: All handlers format responses consistently using KETL's brand voice
+
+Each component is instrumented with OpenTelemetry tracing spans for comprehensive observability through Arize Phoenix.
+
+## Key Components
+
+### Classification Stage
+- Analyzes query content and intent to determine the most appropriate handler
+- Returns the query type, confidence score, and reasoning
+- Uses lightweight prompts for efficient classification
+
+### Specialized Handlers
+- Each handler is optimized for a specific query type:
+  - Product handler searches the product database
+  - Company handler references company information
+  - Warranty handler provides policy details
+- All handlers maintain conversation context for follow-up questions
+
+### Routing Logic
+- The `process_customer_query` function orchestrates the routing flow
+- Handles uncertainty by requesting clarification when needed
+- Manages conversation history for context persistence
+
+## Tracing and Observability
+
+The implementation includes comprehensive OpenTelemetry tracing with Arize Phoenix integration:
+- Parent span for the overall query processing
+- Individual spans for classification and handler execution
+- Key attributes recorded at each stage (query type, confidence score, response length)
+- Clear visualization of the routing decision in trace views
+
+## Usage
+
+Run the example with the routing pattern:
+
+```bash
+python -m src.llm_composition_patterns.patterns.routing.example
+```
+
+The example includes a demonstration flow with sample queries for each handler type.
+
+## Why This Pattern Matters
+
+The Routing pattern is particularly valuable when:
+
+- Different query types require specialized knowledge or data sources
+- Query processing workflows vary significantly based on content
+- System needs to handle a wide range of user intents
+- Efficiency requires targeting specific resources for each query type
+
+This pattern demonstrates how intelligent routing can lead to more accurate, efficient responses while maintaining clear observability through comprehensive tracing.
 
 ## Key Components
 
@@ -118,9 +170,4 @@ To run the example:
    ```bash
    # Create a .env file with your API key
    echo "GROQ_API_KEY=your_api_key_here" > .env
-   ```
-
-3. Run the example:
-   ```bash
-   python -m src.llm_composition_patterns.patterns.routing.example
    ```

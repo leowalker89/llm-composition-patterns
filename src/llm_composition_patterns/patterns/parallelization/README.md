@@ -6,26 +6,62 @@ The Parallelization pattern executes multiple LLM tasks simultaneously, reducing
 
 ![Parallelization Pattern Diagram](./Parallelization.jpg)
 
-## Implementation
+## Implementation Details
 
-This example demonstrates a parallelization pattern for translating KETL Mtn. Apparel product details:
+This example demonstrates the parallelization pattern by translating KETL Mtn. Apparel product details into multiple languages simultaneously:
 
-1. **Product Selection**: Loads product data and selects products to translate
-2. **Language Selection**: Determines which languages to translate into
-3. **Parallel Translation**: Translates multiple product fields into multiple languages simultaneously:
-   - Product name translation
-   - Product features translation
-   - Fabric details translation
-4. **Model Selection**: Uses different models optimized for different language groups:
-   - Western languages: llama-3.3-70b-versatile
-   - Asian languages: qwen-2.5-32b
-   - Arabic languages: mistral-saba-24b
+- Uses `asyncio.gather()` to run multiple translations in parallel
+- Maintains original product names while translating other details
+- Handles all translations with a consistent, fast model (llama-3.1-8b-instant)
+- Includes comprehensive tracing with Arize Phoenix for observability
+- Employs shared Pydantic models for robust data validation
 
 ## Key Components
 
-- **`example.py`**: Main implementation of the parallelization pattern
-- **`ketlmtn_products.json`**: Product database with details about KETL Mtn. products
-- **`groq_helpers.py`**: Helper functions for interacting with LLM providers, including async support
+### Translation Stage
+- `translate_product_details()`: Translates a single product's details into a specific language
+- Preserves the original product name (not translated) while translating features, fabric details, etc.
+
+### Parallel Execution
+- `translate_product()`: Orchestrates multiple parallel translations using `asyncio.gather()`
+- Creates translation tasks for each language and executes them simultaneously
+- Records performance metrics like total time and average time per language
+
+### Result Collection
+- The main function displays comprehensive results showing original and translated content
+- Provides clear performance statistics to demonstrate the time savings
+- Optionally exports results to JSON for further processing
+
+## Tracing and Observability
+
+This implementation includes robust OpenTelemetry tracing with Arize Phoenix integration:
+- The parent span `translate_product_{product_id}` captures the overall process
+- Child spans for each language translation (`translate_to_spanish`, etc.)
+- Key metrics like response lengths and translation success tracked as span attributes
+- Performance statistics (total time, average time per language) recorded for analysis
+
+## Usage
+
+Run the example with a specific product ID and languages:
+
+```bash
+python -m src.llm_composition_patterns.patterns.parallelization.example --product 5 --languages spanish french german
+```
+
+Default settings:
+- Product ID: 1
+- Languages: Spanish, French, German
+
+## Why This Pattern Matters
+
+The Parallelization pattern is particularly valuable when:
+
+- Multiple independent operations need to be performed
+- Response time is critical for user experience
+- Tasks have similar complexity and structure
+- Throughput is more important than sequential processing
+
+This pattern demonstrates how to efficiently handle multiple translation tasks while providing clear performance metrics and comprehensive tracing for monitoring and analysis.
 
 ## Features
 
@@ -33,23 +69,6 @@ This example demonstrates a parallelization pattern for translating KETL Mtn. Ap
 - **Model Specialization**: Uses different models optimized for specific language groups
 - **Efficient Resource Usage**: Reduces overall processing time compared to sequential execution
 - **Scalable Design**: Easily handles multiple products and languages
-
-## Usage
-
-```python
-# Load product data
-products = load_products()
-
-# Translate a product into multiple languages
-result = await translate_product(
-    product_id=1,
-    languages=["Spanish", "French", "Japanese"],
-    products=products
-)
-
-# Display the formatted result
-print(format_translation_result(result))
-```
 
 ## Benefits
 

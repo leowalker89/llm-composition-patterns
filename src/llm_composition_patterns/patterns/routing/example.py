@@ -30,76 +30,15 @@ tracer = trace.get_tracer("routing")  # type: ignore
 # Now import the rest of the modules that might use Groq
 from llm_composition_patterns.common.groq_helpers import run_llm
 from llm_composition_patterns.common.message_types import ChatMessage
-
-
+from llm_composition_patterns.common.ketlmtn_helpers import (
+    load_products, 
+    load_company_info, 
+    load_warranty_info, 
+    load_brand_voice_text as load_brand_voice
+)
 
 # Define query types for routing
 QueryType = Literal["product", "company", "warranty", "unclear"]
-
-
-def load_product_data() -> List[Dict[str, Any]]:
-    """
-    Load product data from the JSON file.
-    
-    Returns:
-        List of product dictionaries
-    """
-    json_path = Path(__file__).parent.parent.parent / "common" / "ketlmtn_data" / "ketlmtn_products.json"
-    try:
-        with open(json_path, "r") as f:
-            return json.load(f)
-    except (FileNotFoundError, json.JSONDecodeError) as e:
-        print(f"Error loading product data: {e}")
-        return []
-
-
-def load_company_info() -> str:
-    """
-    Load company information from text file.
-    
-    Returns:
-        String containing company information
-    """
-    info_path = Path(__file__).parent.parent.parent / "common" / "ketlmtn_data" / "about_us.txt"
-    try:
-        with open(info_path, "r") as f:
-            return f.read()
-    except FileNotFoundError as e:
-        print(f"Error loading company info: {e}")
-        return ""
-
-
-def load_warranty_info() -> str:
-    """
-    Load warranty information from text file.
-    
-    Returns:
-        String containing warranty information
-    """
-    warranty_path = Path(__file__).parent.parent.parent / "common" / "ketlmtn_data" / "lifetime_guarentee.txt"
-    try:
-        with open(warranty_path, "r") as f:
-            return f.read()
-    except FileNotFoundError as e:
-        print(f"Error loading warranty info: {e}")
-        return ""
-
-
-def load_brand_voice() -> str:
-    """
-    Load brand voice guidelines from text file.
-    
-    Returns:
-        String containing brand voice guidelines
-    """
-    voice_path = Path(__file__).parent.parent.parent / "common" / "ketlmtn_data" / "brand_voice.txt"
-    try:
-        with open(voice_path, "r") as f:
-            return f.read()
-    except FileNotFoundError as e:
-        print(f"Error loading brand voice: {e}")
-        return ""
-
 
 def classify_query(user_query: str) -> Tuple[QueryType, float, str]:
     """
@@ -177,7 +116,7 @@ def handle_product_query(user_query: str, conversation_history: Optional[List[Ch
     """
     
     # Load product data from JSON file
-    product_data = load_product_data()
+    product_data = load_products()
     
     # Convert product data to a string format that can be included in the prompt
     product_data_str = json.dumps(product_data, indent=2)

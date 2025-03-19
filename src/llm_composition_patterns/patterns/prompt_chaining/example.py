@@ -26,40 +26,7 @@ tracer = trace.get_tracer("prompt_chaining")  # type: ignore  # Get a tracer for
 # Now import the rest of the modules
 from llm_composition_patterns.common.groq_helpers import run_llm
 from llm_composition_patterns.common.message_types import ChatMessage
-
-
-
-
-def load_product_data() -> List[Dict]:
-    """
-    Load product data from the JSON file.
-    
-    Returns:
-        List of product dictionaries
-    """
-    json_path = Path(__file__).parent.parent.parent / "common" / "ketlmtn_data" / "ketlmtn_products.json"
-    try:
-        with open(json_path, "r") as f:
-            return json.load(f)
-    except (FileNotFoundError, json.JSONDecodeError) as e:
-        print(f"Error loading product data: {e}")
-        return []
-
-
-def load_brand_voice() -> str:
-    """
-    Load brand voice guidelines from text file.
-    
-    Returns:
-        String containing brand voice guidelines
-    """
-    voice_path = Path(__file__).parent.parent.parent / "common" / "ketlmtn_data" / "brand_voice.txt"
-    try:
-        with open(voice_path, "r") as f:
-            return f.read()
-    except FileNotFoundError as e:
-        print(f"Error loading brand voice: {e}")
-        return ""
+from llm_composition_patterns.common.ketlmtn_helpers import load_products, load_brand_voice_text
 
 
 def step1_filter_query_relevance(user_query: str) -> Tuple[bool, str]:
@@ -96,7 +63,7 @@ def step1_filter_query_relevance(user_query: str) -> Tuple[bool, str]:
     activities or apparel, consider it relevant.
     """
     
-    user_prompt = f"Is this query relevant to KETL Mtn. Apparel or outdoor activities? '{user_query}'"
+    user_prompt = f"Is this query relevant to KETL Mtn. Apparel or supported outdoor activities? '{user_query}'"
     
     response = run_llm(
         user_prompt=user_prompt,
@@ -137,16 +104,16 @@ def step2_lookup_product_info(user_query: str, conversation_history: Optional[Li
     """
     
     # Load product data from JSON file
-    product_data = load_product_data()
+    product_data = load_products()
     
     # Convert product data to a string format that can be included in the prompt
     product_data_str = json.dumps(product_data, indent=2)
     
     user_prompt = f"""
-    Customer query: '{user_query}'
-    
     Product database:
     {product_data_str}
+    
+    Customer query: '{user_query}'
     
     Based on this information, provide a detailed answer to the customer's query.
     Reference the product catalog to ensure accuracy.
@@ -173,7 +140,7 @@ def step3_brand_format_response(product_info: str) -> str:
         Formatted response in the company's brand voice
     """
     # Load brand voice guidelines
-    brand_voice = load_brand_voice()
+    brand_voice = load_brand_voice_text()
     
     system_prompt = f"""
     You are the voice of KETL Mtn. Apparel, an outdoor gear company known for 
