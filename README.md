@@ -30,6 +30,8 @@ Directing user queries to specialized handlers based on the type of information 
 ### [Evaluator-Optimizer](src/llm_composition_patterns/patterns/evaluator_optimizer/)
 Implementing an iterative improvement cycle where content is repeatedly generated, evaluated, and refined. Demonstrated through generating and refining sales pitches based on quality criteria.
 
+<img src="src/llm_composition_patterns/patterns/evaluator_optimizer/Evaluator_Optimizer.jpg" alt="Evaluator-Optimizer Pattern" style="background: transparent;">
+
 ### [Orchestrator-Workers](src/llm_composition_patterns/patterns/orchestrator_workers/) (In Development)
 Using a coordinator LLM to manage a team of specialized worker LLMs. Pattern concept developed, implementation being refined for efficiency.
 

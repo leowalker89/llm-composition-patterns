@@ -4,6 +4,8 @@
 
 The Evaluator-Optimizer pattern implements an iterative improvement cycle where content is repeatedly generated, evaluated, and refined based on feedback. This pattern is ideal for creating high-quality outputs that must meet specific criteria.
 
+<img src="./Evaluator_Optimizer.jpg" alt="Evaluator-Optimizer Pattern" style="background: transparent;">
+
 ## How It Works
 
 1. **Generation**: Create an initial piece of content
